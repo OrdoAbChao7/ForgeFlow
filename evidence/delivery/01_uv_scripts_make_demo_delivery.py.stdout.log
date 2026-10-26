@@ -1,0 +1,20 @@
+{
+  "delivery_state": "READY",
+  "goal_id": "goal_fa80ac8793eb4836b8e6a66c70386c72",
+  "log_archive": "evidence\\delivery\\demo\\log_archive.json",
+  "manifest": "evidence\\delivery\\demo\\manifest.json",
+  "manifest_sha256": "beec1f86e601a5ad578b6c3060576487f51e8571ab2ddf3db06db2d764e0f339",
+  "manifest_sha256_file": "evidence\\delivery\\demo\\manifest.sha256",
+  "status": "PASS",
+  "test_exit_codes": [
+    {
+      "exit_codes": [
+        0,
+        0
+      ],
+      "id": "unit"
+    }
+  ],
+  "unverified": [],
+  "verification": "PASS"
+}

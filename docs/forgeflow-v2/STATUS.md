@@ -10,7 +10,9 @@ real command output. Real paid model completion, remote GitHub Actions, Harbor, 
 daemon execution, Icarus simulation and FPGA hardware remain unproven/blocked.
 
 Baseline specification commit: `6f8f99b`.
-Implementation/test commit and exact command hashes: see `evidence/manifest.json`.
+Implementation/test commit used for final evidence: `d4f3625`.
+Evidence manifest status: **PASS** (all phase commands exit 0) at that SHA.
+Exact commands, exits, Git SHAs and log SHA-256: `evidence/manifest.json`.
 
 ## Gate table
 
@@ -25,7 +27,7 @@ Implementation/test commit and exact command hashes: see `evidence/manifest.json
 | G6 | PASS | worktree ownership, bounded parallel, conflict/abort/retry, serial fallback, post-merge regression | `evidence/phase4/` |
 | G7 | PASS | OTel scrubbed spans/local fallback, benchmark raw data, context/recovery/reviewer/parallel ablations; A/B NOT_RUN, Harbor EXTERNAL_BLOCKED | `evidence/phase4/`, `evidence/benchmarks/` |
 | G8 | PASS | Python adapter real tools, FPGA fixture parsers/artifact/hardware status, agent-app demo | `evidence/phase5/`, `examples/` |
-| G9 | PASS (local) | full tests, ruff, docs, install, delivery manifest and blocker list consistent. Remote GitHub Actions is `NOT_RUN`. | `evidence/final/`, `evidence/delivery/` |
+| G9 | PASS (local) | full tests, ruff, docs, clean install, READY delivery manifest and blocker list consistent. Remote GitHub Actions is `NOT_RUN`. | `evidence/final/`, `evidence/delivery/demo/` |
 
 Local core is verified; external integrations are blocked. Overall is **not** a claim of
 100% production completion.
@@ -41,14 +43,22 @@ corresponding regression tests.
 
 ## Actual local test snapshot
 
-- Full suite: `uv run pytest -q` — see `evidence/final/` for the immutable log,
-  JUnit XML, coverage JSON/XML and Git SHA.
-- Latest development run: 112 passed in 295.21s before the final evidence capture.
-- Warnings/deprecations: treated as errors only for `forgeflow.*` deprecations; recorded
-  in logs.
-- Real external checks performed: Pi RPC handshake (no model prompt), Claude CLI version/
-  auth probe (no paid completion), Docker daemon detection (unavailable), Harbor CLI
-  detection (missing), Icarus/Verilator detection (missing).
+- Final evidence run: `uv run pytest -q --cov=forgeflow ...` → **112 passed in 338.33s**,
+  exit 0. Log: `evidence/final/02_uv_--cov-report_xml_evidence_fina.stdout.log`.
+- Coverage: **79.14%** statements (4911/5918), `evidence/final/coverage.json`.
+- JUnit: `evidence/final/junit.xml`; docs/CLI: `evidence/phase0/`.
+- Delivery: `evidence/delivery/demo/manifest.json`, state **READY**, SHA-256
+  `beec1f86e601a5ad578b6c3060576487f51e8571ab2ddf3db06db2d764e0f339`.
+- Clean wheel install: SHA-256
+  `84ea0325b447d6e3c46be281d5ce40fcee686d6e74c05001ef2aa9bf69419f7a`,
+  version 2.0.0, doctor `PASS_WITH_BLOCKERS`, real pytest verify PASS, delivery READY.
+- `ruff check src tests`: PASS (`evidence/final/01_uv_tests.stdout.log`).
+- Benchmark: `bench_20261026T110717Z_2ced62aa`; C/D and structure/full-file/keyword
+  modes 100% verified on the simulator, no-context and diff-only 0%, no-recovery 50%.
+  A/B baselines NOT_RUN; Harbor EXTERNAL_BLOCKED; parallel ablation PASS (1.098× on a
+  2.2 s simulated workload). This is not an LLM-quality comparison.
+- Real external checks: Pi RPC handshake (no model prompt), Claude version/auth probe
+  (no paid completion), Docker daemon unavailable, Harbor/Icarus/Verilator missing.
 
 ## Environment
 
@@ -72,7 +82,9 @@ corresponding regression tests.
 
 ## Evidence and recovery next actions
 
-1. Inspect `evidence/manifest.json` for command, exit code, Git SHA, log SHA-256.
+1. Inspect `evidence/manifest.json` (status PASS) for command, exit code, Git SHA, log
+   SHA-256. The evidence commit follows implementation commit `d4f3625`; docs-only edits
+   do not change the measured code.
 2. Run `uv run pytest -q` and `uv run forge doctor --json`.
 3. For a local E2E: `uv run python examples/basic_goal/run_demo.py --clean-room`.
 4. For benchmark reproduction: `uv run forge benchmark --repeats 2`.

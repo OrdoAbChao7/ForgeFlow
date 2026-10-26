@@ -112,6 +112,9 @@ PHASES: dict[str, list[list[str]]] = {
         ],
         ["uv", "run", "python", "scripts/verify_install.py"],
     ],
+    "delivery": [
+        ["uv", "run", "python", "scripts/make_demo_delivery.py"],
+    ],
     "final": [
         ["uv", "run", "ruff", "check", "src", "tests"],
         [
@@ -129,6 +132,36 @@ PHASES: dict[str, list[list[str]]] = {
         ["git", "rev-parse", "HEAD"],
     ],
 }
+
+
+def collect_artifacts() -> list[dict[str, Any]]:
+    patterns = [
+        "evidence/final/coverage.json",
+        "evidence/final/coverage.xml",
+        "evidence/final/junit.xml",
+        "evidence/delivery/demo/manifest.json",
+        "evidence/delivery/demo/manifest.md",
+        "evidence/delivery/demo/manifest.sha256",
+        "evidence/delivery/demo/log_archive.json",
+    ]
+    benchmark_runs = sorted(
+        (ROOT / "evidence" / "benchmarks").glob("bench_*"), key=lambda path: path.name
+    )
+    if benchmark_runs:
+        for name in ("manifest.json", "runs.jsonl", "summary.csv", "summary.json", "summary.md"):
+            patterns.append(str((benchmark_runs[-1] / name).relative_to(ROOT)))
+    artifacts = []
+    for relative in patterns:
+        path = ROOT / relative
+        if path.is_file():
+            artifacts.append(
+                {
+                    "path": relative,
+                    "sha256": sha256(path),
+                    "bytes": path.stat().st_size,
+                }
+            )
+    return artifacts
 
 
 def run_phase(name: str, commands: list[list[str]]) -> dict[str, Any]:
@@ -193,8 +226,9 @@ def run_phase(name: str, commands: list[list[str]]) -> dict[str, Any]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--phases", nargs="*", choices=[*PHASES, "all"], default=["all"])
+    parser.add_argument("--artifacts-only", action="store_true")
     args = parser.parse_args()
-    selected = list(PHASES) if "all" in args.phases else args.phases
+    selected = [] if args.artifacts_only else list(PHASES) if "all" in args.phases else args.phases
     EVIDENCE.mkdir(exist_ok=True)
     manifest_path = EVIDENCE / "manifest.json"
     previous: dict[str, Any] = {"phases": []}
@@ -221,6 +255,7 @@ def main() -> None:
         },
         "status": "PASS" if all(item["status"] == "PASS" for item in phases) else "INCOMPLETE_OR_FAIL",
         "phases": phases,
+        "artifacts": collect_artifacts(),
         "notes": [
             "Each command log is retained locally with SHA-256.",
             "A PASS means the recorded command exited 0; it does not imply external credentials or hardware passed.",

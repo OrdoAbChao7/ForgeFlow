@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": "3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]",
+      "name": "python",
+      "remediation": null,
+      "status": "PASS"
+    },
+    {
+      "detail": "2.0.0",
+      "name": "forgeflow_version",
+      "remediation": null,
+      "status": "PASS"
+    },
+    {
+      "detail": "E:\\Projects\\ForgeFlow",
+      "name": "workspace_writable",
+      "remediation": "choose a writable workspace with --workspace",
+      "status": "PASS"
+    },
+    {
+      "detail": "git version 2.51.0.windows.1",
+      "name": "git",
+      "remediation": "install Git; durable clean-room snapshots require it",
+      "status": "PASS"
+    },
+    {
+      "detail": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+      "name": "git_repository",
+      "remediation": "run `git init` for commit-bound evidence and clean-room verification",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "integrity": "ok",
+        "path": "E:\\Projects\\ForgeFlow\\.forge\\forgeflow.db",
+        "schema_version": 2
+      },
+      "name": "database",
+      "remediation": null,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "claude": "2.1.310 (Claude Code)",
+        "harbor": "MISSING",
+        "iverilog": "MISSING",
+        "node": "v24.19.0",
+        "npm": "11.17.0",
+        "pi": "1.3.0",
+        "pytest": "pytest 8.4.2",
+        "ruff": "ruff 0.17.2",
+        "tree-sitter": "installed",
+        "uv": "uv 0.12.5 (210d1f678 2026-08-14 x86_64-pc-windows-msvc)",
+        "verilator": "MISSING"
+      },
+      "name": "tools",
+      "remediation": null,
+      "status": "PASS"
+    },
+    {
+      "detail": "exit=1",
+      "name": "docker",
+      "remediation": "start Docker Desktop to enable optional clean-room containers; local isolated rooms still work",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "claude_cli": {
+          "note": "non-interactive paid completion was not invoked",
+          "status": "AVAILABLE_UNVERIFIED_MODEL"
+        },
+        "fpga_hardware": {
+          "note": "Icarus/hardware unavailable; fixture parsers are testable but hardware PASS is never inferred",
+          "status": "EXTERNAL_BLOCKED"
+        },
+        "harbor": {
+          "note": "internal fixture benchmark is used; no Harbor comparison is fabricated",
+          "status": "EXTERNAL_BLOCKED"
+        },
+        "pi_rpc": {
+          "note": "RPC handshake/contract can run locally; paid model completion was not invoked",
+          "status": "AVAILABLE_UNVERIFIED_MODEL"
+        }
+      },
+      "name": "external_integrations",
+      "remediation": null,
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "claude": "2.1.310 (Claude Code)",
+        "docker": "exit=1",
+        "environment_digest": "7359e37152ac581c545a463726a05f6aa567fa76b7d44579b09980757d5af24d",
+        "executable": "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+        "git": "git version 2.51.0.windows.1",
+        "iverilog": "MISSING",
+        "machine": "AMD64",
+        "node": "v24.19.0",
+        "pi": "1.3.0",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "pytest": "pytest 8.4.2",
+        "python": "3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]",
+        "ruff": "ruff 0.17.2",
+        "uv": "uv 0.12.5 (210d1f678 2026-08-14 x86_64-pc-windows-msvc)",
+        "verilator": "MISSING",
+        "workspace": "E:\\Projects\\ForgeFlow"
+      },
+      "name": "environment",
+      "remediation": null,
+      "status": "PASS"
+    }
+  ],
+  "forgeflow_version": "2.0.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]",
+  "status": "PASS_WITH_BLOCKERS",
+  "workspace": "E:\\Projects\\ForgeFlow"
+}

@@ -1,0 +1,19 @@
+                   Benchmark bench_20261026T110717Z_2ced62aa                   
+┌────────────┬───────────┬──────────┬──────┬──────────┬─────────────┬─────────┐
+│            │           │          │      │          │ False       │         │
+│ Mode       │ Context   │ Recovery │ Runs │ Verified │ completion  │ Latency │
+├────────────┼───────────┼──────────┼──────┼──────────┼─────────────┼─────────┤
+│ C_core     │ structure │ True     │ 4    │ 100%     │ 50%         │ 11.055s │
+│ D_full     │ structure │ True     │ 4    │ 100%     │ 50%         │ 11.031s │
+│ ablation_… │ none      │ True     │ 4    │ 0%       │ 100%        │ 16.644s │
+│ ablation_… │ structure │ False    │ 4    │ 50%      │ 50%         │ 9.383s  │
+│ ablation_… │ full_file │ True     │ 4    │ 100%     │ 50%         │ 11.828s │
+│ ablation_… │ keyword   │ True     │ 4    │ 100%     │ 50%         │ 12.098s │
+│ ablation_… │ diff_only │ True     │ 4    │ 0%       │ 100%        │ 17.590s │
+└────────────┴───────────┴──────────┴──────┴──────────┴─────────────┴─────────┘
+A_native_agent: NOT_RUN — no approved paid model baseline; CLI presence is not 
+a benchmark result
+B_openspec_gsd: NOT_RUN — OpenSpec/GSD baseline tools were not configured or 
+executed
+Artifacts: 
+E:\Projects\ForgeFlow\evidence\benchmarks\bench_20261026T110717Z_2ced62aa

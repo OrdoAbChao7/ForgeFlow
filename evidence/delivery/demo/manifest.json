@@ -1,0 +1,160 @@
+{
+  "artifacts": [],
+  "dependencies": {},
+  "environment": {
+    "claude": "2.1.310 (Claude Code)",
+    "docker": "exit=1",
+    "environment_digest": "02e32fe123f8cc6f8b7888f0474da925f6c804bb0c08e72d7c937950ee0f7d2f",
+    "executable": "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+    "git": "git version 2.51.0.windows.1",
+    "iverilog": "MISSING",
+    "machine": "AMD64",
+    "node": "v24.19.0",
+    "pi": "1.3.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pytest": "pytest 8.4.2",
+    "python": "3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+    "ruff": "ruff 0.17.2",
+    "uv": "uv 0.12.5 (210d1f678 2026-08-14 x86_64-pc-windows-msvc)",
+    "verilator": "MISSING",
+    "workspace": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-0nuhjqng"
+  },
+  "evidence_index": [
+    {
+      "argv": [
+        "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests"
+      ],
+      "attempt_id": "attempt_ad1b543ae6fc4f6097658cac9d16985f",
+      "created_at": "2026-10-26T11:22:03.770704+00:00",
+      "env_digest": "02e32fe123f8cc6f8b7888f0474da925f6c804bb0c08e72d7c937950ee0f7d2f",
+      "exit_code": 0,
+      "gate": "unit",
+      "id": "ev_26bb116e895e4b839abdf103abb5860a",
+      "log_dir": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-0nuhjqng\\.forge\\runs\\run_f7a4bf6ffa1d4372980f2573310e44fe\\result.json",
+      "report_sha256": "a2add39a81eb2de5a856832b486a843cc752a377a7844ba2d6c0989529564bc9",
+      "runner_kind": "command_runner",
+      "scope": [
+        "adds"
+      ],
+      "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
+      "task_id": "task_27fba1eaa6dec0456318",
+      "trust": "trusted_runner"
+    },
+    {
+      "argv": [
+        "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests"
+      ],
+      "attempt_id": null,
+      "created_at": "2026-10-26T11:22:09.136934+00:00",
+      "env_digest": "02e32fe123f8cc6f8b7888f0474da925f6c804bb0c08e72d7c937950ee0f7d2f",
+      "exit_code": 0,
+      "gate": "unit",
+      "id": "ev_734716bdd3334d35a32731db95da977a",
+      "log_dir": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-0nuhjqng\\.forge\\runs\\run_3ba415b05cf7427b8d9c66ccc50aae64\\result.json",
+      "report_sha256": "ce5bb479d24a867ee2107177486153ec72c13c2b60db076ae5925fd38212bafb",
+      "runner_kind": "command_runner",
+      "scope": [
+        "adds"
+      ],
+      "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
+      "task_id": null,
+      "trust": "trusted_runner"
+    }
+  ],
+  "feature_scope": [
+    "Produce a READY manifest from independently verified add()."
+  ],
+  "forgeflow_version": "2.0.0",
+  "format_version": 1,
+  "gates": [
+    {
+      "criterion_id": "adds",
+      "evaluated_at": "2026-10-26T11:22:10.185980Z",
+      "evidence_ids": [
+        "ev_26bb116e895e4b839abdf103abb5860a",
+        "ev_734716bdd3334d35a32731db95da977a"
+      ],
+      "gate": "unit",
+      "goal_id": "goal_fa80ac8793eb4836b8e6a66c70386c72",
+      "goal_revision": 1,
+      "id": "gate_424e7facf9ec4488a11861161e2070d6",
+      "policy_version": "delivery-demo-v1",
+      "reason": "2 trusted evidence record(s) cover ['adds']",
+      "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
+      "status": "PASS"
+    },
+    {
+      "criterion_id": null,
+      "evaluated_at": "2026-10-26T11:22:10.199775Z",
+      "evidence_ids": [
+        "ev_26bb116e895e4b839abdf103abb5860a",
+        "ev_734716bdd3334d35a32731db95da977a"
+      ],
+      "gate": "unit",
+      "goal_id": "goal_fa80ac8793eb4836b8e6a66c70386c72",
+      "goal_revision": 1,
+      "id": "gate_2deadca1705d4ca69ddd2365494301dc",
+      "policy_version": "delivery-demo-v1",
+      "reason": "2 trusted evidence record(s) cover ['adds']",
+      "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
+      "status": "PASS"
+    }
+  ],
+  "generated_at": "2026-10-26T11:22:10.221433Z",
+  "git_sha": "af382c33a8e145528fd73bce8cda697fdbdf6462",
+  "goal_id": "goal_fa80ac8793eb4836b8e6a66c70386c72",
+  "goal_title": "Delivery demo",
+  "regeneration_commands": [
+    "forge verify goal_fa80ac8793eb4836b8e6a66c70386c72",
+    "forge verify goal_fa80ac8793eb4836b8e6a66c70386c72 --clean-room",
+    "forge deliver goal_fa80ac8793eb4836b8e6a66c70386c72"
+  ],
+  "revision": 1,
+  "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
+  "state": "READY",
+  "test_commands": [
+    {
+      "argv": [
+        "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests"
+      ],
+      "gate": "unit",
+      "id": "unit",
+      "observations": [
+        {
+          "evidence_id": "ev_26bb116e895e4b839abdf103abb5860a",
+          "exit_code": 0,
+          "report_sha256": "a2add39a81eb2de5a856832b486a843cc752a377a7844ba2d6c0989529564bc9",
+          "stdout_sha256": "db80ef13e92e5f4207aae7adf10abb9db0cc7dfaccd870dc2654e9a9a25ec009",
+          "timed_out": false,
+          "trust": "trusted_runner"
+        },
+        {
+          "evidence_id": "ev_734716bdd3334d35a32731db95da977a",
+          "exit_code": 0,
+          "report_sha256": "ce5bb479d24a867ee2107177486153ec72c13c2b60db076ae5925fd38212bafb",
+          "stdout_sha256": "88bd8dfdb7a94b6010ba5e505610de7af6f1c0243a48a0fdf1fe146c619a4fa4",
+          "timed_out": false,
+          "trust": "trusted_runner"
+        }
+      ],
+      "required": true,
+      "scope": [
+        "adds"
+      ]
+    }
+  ],
+  "unverified": []
+}

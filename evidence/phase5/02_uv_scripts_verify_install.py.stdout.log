@@ -1,0 +1,281 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "build",
+        "--wheel",
+        "--out-dir",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\dist"
+      ],
+      "cwd": "E:\\Projects\\ForgeFlow",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:29.098490+00:00",
+      "stderr_sha256": "e63a8e91c1d2b67f20d23d0a306d8e44ececc0e88e12e97107d95605b7c73f8d",
+      "stderr_tail": "Building wheel...\nSuccessfully built C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\dist\\forgeflow_harness-2.0.0-py3-none-any.whl\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_tail": ""
+    },
+    {
+      "argv": [
+        "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+        "-m",
+        "venv",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv"
+      ],
+      "cwd": "E:\\Projects\\ForgeFlow",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:30.793758+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_tail": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\dist\\forgeflow_harness-2.0.0-py3-none-any.whl",
+        "pytest"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:34.629148+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "b823e115f1c6841eca40a7e600e79add4220f7efb6ef0271167f326aa9b9ec09",
+      "stdout_tail": " pytest)\n  Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)\nCollecting pygments>=2.7.2 (from pytest)\n  Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)\nCollecting typing-extensions>=4.5.0 (from opentelemetry-api<2,>=1.29->forgeflow-harness==2.0.0)\n  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)\nCollecting opentelemetry-semantic-conventions==0.66b1 (from opentelemetry-sdk<2,>=1.29->forgeflow-harness==2.0.0)\n  Using cached opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl.metadata (2.4 kB)\nCollecting annotated-types>=0.6.0 (from pydantic<3,>=2.10->forgeflow-harness==2.0.0)\n  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)\nCollecting pydantic-core==2.50.1 (from pydantic<3,>=2.10->forgeflow-harness==2.0.0)\n  Using cached pydantic_core-2.50.1-cp312-cp312-win_amd64.whl.metadata (6.7 kB)\nCollecting typing-inspection>=0.4.4 (from pydantic<3,>=2.10->forgeflow-harness==2.0.0)\n  Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)\nCollecting markdown-it-py>=2.2.0 (from rich<15,>=13->forgeflow-harness==2.0.0)\n  Using cached markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)\nCollecting shellingham>=1.3.0 (from typer<1,>=0.15->forgeflow-harness==2.0.0)\n  Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)\nCollecting annotated-doc>=0.0.2 (from typer<1,>=0.15->forgeflow-harness==2.0.0)\n  Using cached annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)\nCollecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<15,>=13->forgeflow-harness==2.0.0)\n  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)\nUsing cached pytest-9.1.1-py3-none-any.whl (386 kB)\nUsing cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)\nUsing cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)\nUsing cached opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)\nUsing cached opentelemetry_sdk-1.45.1-py3-none-any.whl (140 kB)\nUsing cached opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl (206 kB)\nUsing cached packaging-26.3-py3-none-any.whl (129 kB)\nUsing cached pluggy-1.7.0-py3-none-any.whl (27 kB)\nUsing cached pydantic-2.14.1-py3-none-any.whl (488 kB)\nUsing cached pydantic_core-2.50.1-cp312-cp312-win_amd64.whl (2.2 MB)\nUsing cached pygments-2.21.0-py3-none-any.whl (1.3 MB)\nUsing cached pyyaml-6.0.3-cp312-cp312-win_amd64.whl (154 kB)\nUsing cached rich-14.3.4-py3-none-any.whl (310 kB)\nUsing cached tree_sitter-0.25.2-cp312-cp312-win_amd64.whl (127 kB)\nUsing cached tree_sitter_python-0.25.0-cp310-abi3-win_amd64.whl (76 kB)\nUsing cached tree_sitter_typescript-0.23.2-cp39-abi3-win_amd64.whl (278 kB)\nUsing cached typer-0.27.3-py3-none-any.whl (123 kB)\nUsing cached annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)\nUsing cached annotated_types-0.8.0-py3-none-any.whl (13 kB)\nUsing cached markdown_it_py-4.2.0-py3-none-any.whl (91 kB)\nUsing cached shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)\nUsing cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)\nUsing cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)\nUsing cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)\nInstalling collected packages: typing-extensions, tree-sitter-typescript, tree-sitter-python, tree-sitter, shellingham, pyyaml, pygments, pluggy, packaging, mdurl, iniconfig, colorama, annotated-types, annotated-doc, typing-inspection, pytest, pydantic-core, opentelemetry-api, markdown-it-py, rich, pydantic, opentelemetry-semantic-conventions, typer, opentelemetry-sdk, forgeflow-harness\nSuccessfully installed annotated-doc-0.0.5 annotated-types-0.8.0 colorama-0.4.6 forgeflow-harness-2.0.0 iniconfig-2.3.1 markdown-it-py-4.2.0 mdurl-0.1.2 opentelemetry-api-1.45.1 opentelemetry-sdk-1.45.1 opentelemetry-semantic-conventions-0.66b1 packaging-26.3 pluggy-1.7.0 pydantic-2.14.1 pydantic-core-2.50.1 pygments-2.21.0 pytest-9.1.1 pyyaml-6.0.3 rich-14.3.4 shellingham-1.5.4 tree-sitter-0.25.2 tree-sitter-python-0.25.0 tree-sitter-typescript-0.23.2 typer-0.27.3 typing-extensions-4.16.0 typing-inspection-0.4.4\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:47.175618+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "c28fcca53637bc88e124af1725df13cb98c69dedefd62fb3cdbe1cdb6b760624",
+      "stdout_tail": "2.0.0\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "--help"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:48.546792+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "5b5ec048c1b7123e88aa235b3021796de42a9313f08d49f0fc1bb006ed3ab218",
+      "stdout_tail": "                                                                               \n Usage: forge [OPTIONS] COMMAND [ARGS]...                                      \n                                                                               \n ForgeFlow 2.0 - durable, verifiable and evaluable AI coding harness.          \n                                                                               \n\u250c\u2500 Options \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 --version  -V        Show version and exit.                                 \u2502\n\u2502 --help               Show this message and exit.                            \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500 Commands \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 init       Initialize ForgeFlow state without overwriting project files.    \u2502\n\u2502 goal       Compile and persist a goal, revision and dependency DAG.         \u2502\n\u2502 plan       Show the hard-dependency DAG, waves and ready frontier.          \u2502\n\u2502 run        Execute the ready frontier with independent verification.        \u2502\n\u2502 quick      Compile a risk-scoped quick plan and run it (gates are never     \u2502\n\u2502            skipped).                                                        \u2502\n\u2502 status     Show durable task, gate and recovery status.                     \u2502\n\u2502 verify     Run trusted verifier commands and evaluate all contract gates.   \u2502\n\u2502 resume     Recover expired leases and requeue safely resumable work.        \u2502\n\u2502 recover    Inspect interrupted/blocked tasks and required manual actions.   \u2502\n\u2502 context    Build an explainable, budgeted context bundle.                   \u2502\n\u2502 explain    Trace which test and source version support one acceptance       \u2502\n\u2502            criterion.                                                       \u2502\n\u2502 pause      Pause a running goal without losing task leases or events.       \u2502\n\u2502 cancel     Cancel a goal and all unfinished tasks.                          \u2502\n\u2502 benchmark  Run the reproducible internal fixture benchmark and ablations.   \u2502\n\u2502 deliver    Build a READY/BLOCKED delivery manifest and evidence index.      \u2502\n\u2502 doctor     Check toolchain, persistence, git and external integration       \u2502\n\u2502            readiness.                                                       \u2502\n\u2502 events     Inspect append-only domain events.                               \u2502\n\u2502 policy     Offline policy validation, activation and rollback.              \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "init",
+        "--workspace",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+        "--json"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:49.116404+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "3205da8eb22566c9a802d4bce497122a47bb39216762f5a145af1bbefd9ba572",
+      "stdout_tail": "{\n  \"database\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\\\\.forge\\\\forgeflow.db\",\n  \"git_sha\": \"NO_GIT\",\n  \"status\": \"initialized\",\n  \"version\": \"2.0.0\",\n  \"workspace\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\"\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "-b",
+        "main"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:49.568281+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "2e5dedfef287abb49e6a8b4d3448b384d83b6dbb74bccfdbde0826444699b63c",
+      "stdout_tail": "Initialized empty Git repository in C:/Users/32583/AppData/Local/Temp/forgeflow-clean-install-68ebp99o/demo/.git/\n"
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "clean@forgeflow.invalid"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:49.686246+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_tail": ""
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "ForgeFlow Clean"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:49.735782+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_tail": ""
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "-A"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:49.779940+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_tail": ""
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "clean fixture"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:49.847930+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "dd7c2fc7feb5e2da21bf43b3143b536458e8bfe195efbf57d041218f2fbf4f37",
+      "stdout_tail": "[main (root-commit) b93535c] clean fixture\n 4 files changed, 9 insertions(+)\n create mode 100644 .gitignore\n create mode 100644 calc.py\n create mode 100644 conftest.py\n create mode 100644 tests/test_calc.py\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "goal",
+        "--file",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo\\goal.json",
+        "--workspace",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+        "--json"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:49.963637+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "a54e1a2d15911c4906c6e84f6dcd424c047f257c59fd85ea852676e509396204",
+      "stdout_tail": "{\n  \"git_sha\": \"b93535c4d1ef5049e2571848e336698cfff0b49e\",\n  \"goal_id\": \"goal_957a6cc1774648dda9e4f8f67def2924\",\n  \"revision\": 1,\n  \"status\": \"PLANNED\",\n  \"tasks\": [\n    {\n      \"id\": \"task_a333357929e1064a1aec\",\n      \"key\": \"fix-add\"\n    }\n  ],\n  \"title\": \"Clean install E2E\"\n}\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "run",
+        "goal_957a6cc1774648dda9e4f8f67def2924",
+        "--agent",
+        "mock",
+        "--workspace",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+        "--json"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:50.730608+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "edfd6890833f7d8b6380a0a8973b326d3caa3f35d6ff2106506b098eb1e40c89",
+      "stdout_tail": "{\n  \"agent_cost_usd\": 0.0,\n  \"context_tokens\": 287,\n  \"errors\": [],\n  \"goal_id\": \"goal_957a6cc1774648dda9e4f8f67def2924\",\n  \"goal_status\": \"VERIFYING\",\n  \"goal_verification\": {},\n  \"policy\": null,\n  \"tasks\": [\n    {\n      \"agent_claimed_success\": true,\n      \"agent_cost_usd\": 0.0,\n      \"attempt_id\": \"attempt_cd32d09f3f644c2487bd7d60e6fd9956\",\n      \"context_tokens\": 287,\n      \"error\": null,\n      \"evidence_ids\": [\n        \"ev_55a26d5713514e67a21911c4be79f50b\"\n      ],\n      \"false_completion\": false,\n      \"gates\": {\n        \"unit:adds\": \"PASS\"\n      },\n      \"recovery_retry\": false,\n      \"status\": \"VERIFIED\",\n      \"task_id\": \"task_a333357929e1064a1aec\",\n      \"task_key\": \"fix-add\",\n      \"verified\": true\n    }\n  ]\n}\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "verify",
+        "goal_957a6cc1774648dda9e4f8f67def2924",
+        "--workspace",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+        "--json"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:57.330559+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "367f3b055a976744c2263bc374478da7c637d91c80351a3cfa2736bdf05037dc",
+      "stdout_tail": "{\n  \"cleanroom\": null,\n  \"evidence_ids\": [\n    \"ev_9ca14ff97df344a0ad985d47b0a79d34\"\n  ],\n  \"failures\": [],\n  \"gates\": {\n    \"unit\": \"PASS\"\n  },\n  \"goal_id\": \"goal_957a6cc1774648dda9e4f8f67def2924\",\n  \"status\": \"PASS\"\n}\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "deliver",
+        "goal_957a6cc1774648dda9e4f8f67def2924",
+        "--workspace",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+        "--json"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:04:59.269235+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "a5f26f49a2b93c3c1f4c3a1d74bff7a9e8dd900064699bc130932b3de5949501",
+      "stdout_tail": "{\n  \"gates\": {\n    \"unit\": \"PASS\"\n  },\n  \"goal_id\": \"goal_957a6cc1774648dda9e4f8f67def2924\",\n  \"manifest\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\\\\evidence\\\\delivery\\\\goal_957a6cc1774648dda9e4f8f67def2924\\\\manifest.json\",\n  \"output_dir\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\\\\evidence\\\\delivery\\\\goal_957a6cc1774648dda9e4f8f67def2924\",\n  \"sha256_file\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\\\\evidence\\\\delivery\\\\goal_957a6cc1774648dda9e4f8f67def2924\\\\manifest.sha256\",\n  \"state\": \"READY\",\n  \"unverified\": []\n}\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "doctor",
+        "--workspace",
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+        "--json"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:05:02.780531+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "06e15826a93637521c6f762e22e7e9623d7bdfe71d70f9ff5dd3b5807ec76d93",
+      "stdout_tail": " \"3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]\",\n      \"name\": \"python\",\n      \"remediation\": null,\n      \"status\": \"PASS\"\n    },\n    {\n      \"detail\": \"2.0.0\",\n      \"name\": \"forgeflow_version\",\n      \"remediation\": null,\n      \"status\": \"PASS\"\n    },\n    {\n      \"detail\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\",\n      \"name\": \"workspace_writable\",\n      \"remediation\": \"choose a writable workspace with --workspace\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"detail\": \"git version 2.51.0.windows.1\",\n      \"name\": \"git\",\n      \"remediation\": \"install Git; durable clean-room snapshots require it\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"detail\": \"b93535c4d1ef5049e2571848e336698cfff0b49e\",\n      \"name\": \"git_repository\",\n      \"remediation\": \"run `git init` for commit-bound evidence and clean-room verification\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"detail\": {\n        \"integrity\": \"ok\",\n        \"path\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\\\\.forge\\\\forgeflow.db\",\n        \"schema_version\": 2\n      },\n      \"name\": \"database\",\n      \"remediation\": null,\n      \"status\": \"PASS\"\n    },\n    {\n      \"detail\": {\n        \"claude\": \"2.1.310 (Claude Code)\",\n        \"harbor\": \"MISSING\",\n        \"iverilog\": \"MISSING\",\n        \"node\": \"v24.19.0\",\n        \"npm\": \"11.17.0\",\n        \"pi\": \"1.3.0\",\n        \"pytest\": \"pytest 8.4.2\",\n        \"ruff\": \"ruff 0.17.2\",\n        \"tree-sitter\": \"installed\",\n        \"uv\": \"uv 0.12.5 (210d1f678 2026-08-14 x86_64-pc-windows-msvc)\",\n        \"verilator\": \"MISSING\"\n      },\n      \"name\": \"tools\",\n      \"remediation\": null,\n      \"status\": \"PASS\"\n    },\n    {\n      \"detail\": \"exit=1\",\n      \"name\": \"docker\",\n      \"remediation\": \"start Docker Desktop to enable optional clean-room containers; local isolated rooms still work\",\n      \"status\": \"BLOCKED\"\n    },\n    {\n      \"detail\": {\n        \"claude_cli\": {\n          \"note\": \"non-interactive paid completion was not invoked\",\n          \"status\": \"AVAILABLE_UNVERIFIED_MODEL\"\n        },\n        \"fpga_hardware\": {\n          \"note\": \"Icarus/hardware unavailable; fixture parsers are testable but hardware PASS is never inferred\",\n          \"status\": \"EXTERNAL_BLOCKED\"\n        },\n        \"harbor\": {\n          \"note\": \"internal fixture benchmark is used; no Harbor comparison is fabricated\",\n          \"status\": \"EXTERNAL_BLOCKED\"\n        },\n        \"pi_rpc\": {\n          \"note\": \"RPC handshake/contract can run locally; paid model completion was not invoked\",\n          \"status\": \"AVAILABLE_UNVERIFIED_MODEL\"\n        }\n      },\n      \"name\": \"external_integrations\",\n      \"remediation\": null,\n      \"status\": \"BLOCKED\"\n    },\n    {\n      \"detail\": {\n        \"claude\": \"2.1.310 (Claude Code)\",\n        \"docker\": \"exit=1\",\n        \"environment_digest\": \"02e32fe123f8cc6f8b7888f0474da925f6c804bb0c08e72d7c937950ee0f7d2f\",\n        \"executable\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\venv\\\\Scripts\\\\python.exe\",\n        \"git\": \"git version 2.51.0.windows.1\",\n        \"iverilog\": \"MISSING\",\n        \"machine\": \"AMD64\",\n        \"node\": \"v24.19.0\",\n        \"pi\": \"1.3.0\",\n        \"platform\": \"Windows-11-10.0.26200-SP0\",\n        \"pytest\": \"pytest 8.4.2\",\n        \"python\": \"3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]\",\n        \"ruff\": \"ruff 0.17.2\",\n        \"uv\": \"uv 0.12.5 (210d1f678 2026-08-14 x86_64-pc-windows-msvc)\",\n        \"verilator\": \"MISSING\",\n        \"workspace\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\"\n      },\n      \"name\": \"environment\",\n      \"remediation\": null,\n      \"status\": \"PASS\"\n    }\n  ],\n  \"forgeflow_version\": \"2.0.0\",\n  \"platform\": \"Windows-11-10.0.26200-SP0\",\n  \"python\": \"3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]\",\n  \"status\": \"PASS_WITH_BLOCKERS\",\n  \"workspace\": \"C:\\\\Users\\\\32583\\\\AppData\\\\Local\\\\Temp\\\\forgeflow-clean-install-68ebp99o\\\\demo\"\n}\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\forge.exe",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo",
+      "exit_code": 0,
+      "started_at": "2026-10-26T11:05:07.521405+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": "",
+      "stdout_sha256": "c28fcca53637bc88e124af1725df13cb98c69dedefd62fb3cdbe1cdb6b760624",
+      "stdout_tail": "2.0.0\n"
+    }
+  ],
+  "delivery_state": "READY",
+  "doctor_status": "PASS_WITH_BLOCKERS",
+  "goal_id": "goal_957a6cc1774648dda9e4f8f67def2924",
+  "installed_version": "2.0.0",
+  "manifest": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\demo\\evidence\\delivery\\goal_957a6cc1774648dda9e4f8f67def2924\\manifest.json",
+  "status": "PASS",
+  "venv_python": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-clean-install-68ebp99o\\venv\\Scripts\\python.exe",
+  "verification": "PASS",
+  "wheel": {
+    "name": "forgeflow_harness-2.0.0-py3-none-any.whl",
+    "sha256": "84ea0325b447d6e3c46be281d5ce40fcee686d6e74c05001ef2aa9bf69419f7a"
+  }
+}

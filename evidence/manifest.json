@@ -1,0 +1,660 @@
+{
+  "artifacts": [
+    {
+      "bytes": 520210,
+      "path": "evidence/final/coverage.json",
+      "sha256": "a6775dc6d5d89e65dfcbf0f75273924265feb188cf95a76ac6cda2df5e31b089"
+    },
+    {
+      "bytes": 277639,
+      "path": "evidence/final/coverage.xml",
+      "sha256": "e3c996427d3d520025e110abfad8b5995ad9505e0b92c9a5c77b1de5857a2e4d"
+    },
+    {
+      "bytes": 13335,
+      "path": "evidence/final/junit.xml",
+      "sha256": "88ad0c42fa88c63d6b06f759ff44659d7ae122db01561d11ddfe9c2ede475e00"
+    },
+    {
+      "bytes": 5949,
+      "path": "evidence/delivery/demo/manifest.json",
+      "sha256": "beec1f86e601a5ad578b6c3060576487f51e8571ab2ddf3db06db2d764e0f339"
+    },
+    {
+      "bytes": 1422,
+      "path": "evidence/delivery/demo/manifest.md",
+      "sha256": "53206e064dcd958c0a7b782fb9bf5179900dd9e753f09b50867d299e617ab332"
+    },
+    {
+      "bytes": 66,
+      "path": "evidence/delivery/demo/manifest.sha256",
+      "sha256": "f5b3d024dad230157abbce547dc58c5cba019d5c244394d0cd1b2bfb17a5523d"
+    },
+    {
+      "bytes": 1179,
+      "path": "evidence/delivery/demo/log_archive.json",
+      "sha256": "e7105b0cb22c234f7a034cf06487910d8ec981b61f7389358decb3f48e7b5a4e"
+    },
+    {
+      "bytes": 4504,
+      "path": "evidence\\benchmarks\\bench_20261026T110717Z_2ced62aa\\manifest.json",
+      "sha256": "a2f9cd22f1019e6bcacc9258f1a2eca25f4c8cd2d13137357b7c41298d267a62"
+    },
+    {
+      "bytes": 115958,
+      "path": "evidence\\benchmarks\\bench_20261026T110717Z_2ced62aa\\runs.jsonl",
+      "sha256": "273d92320f36c5ea17243e5afb2b5f331ce82b246281bb3a170f869080ef6a6b"
+    },
+    {
+      "bytes": 1023,
+      "path": "evidence\\benchmarks\\bench_20261026T110717Z_2ced62aa\\summary.csv",
+      "sha256": "ec1bc25a209d7aec16bd13cf5fad80293b9bfaedda68f64fd9b200b80b23a02e"
+    },
+    {
+      "bytes": 8581,
+      "path": "evidence\\benchmarks\\bench_20261026T110717Z_2ced62aa\\summary.json",
+      "sha256": "8b396bedb51a19b03afe13efe46ceed5035440e8fa48950eb7daa13f0bb68016"
+    },
+    {
+      "bytes": 1660,
+      "path": "evidence\\benchmarks\\bench_20261026T110717Z_2ced62aa\\summary.md",
+      "sha256": "16380e49ed863df1b5bff034d4c705708be8deb04661c0d4dbe2a92c6a959b42"
+    }
+  ],
+  "environment": {
+    "executable": "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+    "machine": "AMD64",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "format_version": 1,
+  "generated_at": "2026-10-26T11:24:13.483805+00:00",
+  "git_branch": "main",
+  "git_sha": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+  "notes": [
+    "Each command log is retained locally with SHA-256.",
+    "A PASS means the recorded command exited 0; it does not imply external credentials or hardware passed.",
+    "Benchmark baselines A/B are NOT_RUN and Harbor is EXTERNAL_BLOCKED unless separately proven."
+  ],
+  "phases": [
+    {
+      "commands": [
+        {
+          "argv": [
+            "git",
+            "status",
+            "--short",
+            "--branch"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:01:02.502195+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": false,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 1,
+          "started_at": "2026-10-26T11:01:02.355319+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase0\\01_git_--branch.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 9,
+            "path": "evidence\\phase0\\01_git_--branch.stdout.log",
+            "sha256": "75b66887a5bf1dc7550244acc369f9960e98a921a1dcf8cc294082e365702803"
+          }
+        },
+        {
+          "argv": [
+            "git",
+            "log",
+            "-1",
+            "--format=%H%n%s"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:01:02.727657+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 2,
+          "started_at": "2026-10-26T11:01:02.592811+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase0\\02_git_--format__H_n_s.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 99,
+            "path": "evidence\\phase0\\02_git_--format__H_n_s.stdout.log",
+            "sha256": "2ea3410592ea3c04c44bad36a93e227f5d78407bf2a4b6a01b11f7bf7c3c8ab3"
+          }
+        },
+        {
+          "argv": [
+            "uv",
+            "run",
+            "forge",
+            "--help"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:01:03.436735+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 3,
+          "started_at": "2026-10-26T11:01:02.841594+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase0\\03_uv_--help.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 3280,
+            "path": "evidence\\phase0\\03_uv_--help.stdout.log",
+            "sha256": "35183bc83093d01ff97e9dcd13aae5536b65e53261b2168dfb96fed61c291a1f"
+          }
+        },
+        {
+          "argv": [
+            "uv",
+            "run",
+            "forge",
+            "doctor",
+            "--json"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:01:08.354618+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 4,
+          "started_at": "2026-10-26T11:01:03.531800+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase0\\04_uv_--json.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 3827,
+            "path": "evidence\\phase0\\04_uv_--json.stdout.log",
+            "sha256": "59eaa7dde9568d6b59c180e83398fea886aeaa8c972aaafa4deb176118908d01"
+          }
+        },
+        {
+          "argv": [
+            "uv",
+            "run",
+            "python",
+            "-c",
+            "from pathlib import Path; import json; required=['ARCHITECTURE.md','TASKS.md','STATUS.md','DECISIONS.md','PROTOCOL_NOTES.md']; missing=[x for x in required if not (Path('docs/forgeflow-v2')/x).is_file()]; print(json.dumps({'missing':missing})); raise SystemExit(1 if missing else 0)"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:01:08.628597+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 5,
+          "started_at": "2026-10-26T11:01:08.440892+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase0\\05_uv_from_pathlib_import_Path__impo.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 17,
+            "path": "evidence\\phase0\\05_uv_from_pathlib_import_Path__impo.stdout.log",
+            "sha256": "4a3284d42429de499a0940e0e7f38fb81ca472aeb377f5ecc370a92e20bbcb08"
+          }
+        }
+      ],
+      "phase": "phase0",
+      "status": "PASS"
+    },
+    {
+      "commands": [
+        {
+          "argv": [
+            "uv",
+            "run",
+            "pytest",
+            "tests/unit/test_planner.py",
+            "tests/unit/test_store.py",
+            "tests/unit/test_runner.py",
+            "tests/integration/test_recovery_resume.py",
+            "-q"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:01:47.947044+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 1,
+          "started_at": "2026-10-26T11:01:08.727739+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase1\\01_uv_-q.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 102,
+            "path": "evidence\\phase1\\01_uv_-q.stdout.log",
+            "sha256": "0244aa4baedcb64f3820e0f02ea5bd8e47576667acf78f60c7aa3e245d0d1d11"
+          }
+        }
+      ],
+      "phase": "phase1",
+      "status": "PASS"
+    },
+    {
+      "commands": [
+        {
+          "argv": [
+            "uv",
+            "run",
+            "pytest",
+            "tests/security/test_evidence.py",
+            "tests/integration/test_e2e_mock.py",
+            "-q"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:03:34.749298+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 1,
+          "started_at": "2026-10-26T11:01:48.033094+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase2\\01_uv_-q.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 113,
+            "path": "evidence\\phase2\\01_uv_-q.stdout.log",
+            "sha256": "ae6dc86f477a4fd788741557b4018011a4fef4244b411c1dc2a26c2cbd1d034d"
+          }
+        }
+      ],
+      "phase": "phase2",
+      "status": "PASS"
+    },
+    {
+      "commands": [
+        {
+          "argv": [
+            "uv",
+            "run",
+            "pytest",
+            "tests/unit/test_context.py",
+            "tests/integration/test_agents.py",
+            "tests/integration/test_mcp_acp.py",
+            "-q"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:03:55.012490+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 1,
+          "started_at": "2026-10-26T11:03:34.850248+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase3\\01_uv_-q.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 102,
+            "path": "evidence\\phase3\\01_uv_-q.stdout.log",
+            "sha256": "03af067971d41acb0f6e26b34c2fa836c263b75f5a5da8ab3f9e9672bc11d0fd"
+          }
+        }
+      ],
+      "phase": "phase3",
+      "status": "PASS"
+    },
+    {
+      "commands": [
+        {
+          "argv": [
+            "uv",
+            "run",
+            "pytest",
+            "tests/unit/test_telemetry.py",
+            "tests/integration/test_parallel.py",
+            "tests/integration/test_benchmark_policy.py",
+            "-q"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:07:17.383832+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 1,
+          "started_at": "2026-10-26T11:05:21.634328+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase4\\01_uv_-q.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 113,
+            "path": "evidence\\phase4\\01_uv_-q.stdout.log",
+            "sha256": "8f6bdf9ceba8817c3b2d7bb83f0dad7ce6d3626939a95982b323395f35b04dd3"
+          }
+        },
+        {
+          "argv": [
+            "uv",
+            "run",
+            "forge",
+            "benchmark",
+            "--repeats",
+            "2",
+            "--workspace",
+            "."
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:13:24.564293+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 2,
+          "started_at": "2026-10-26T11:07:17.484637+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase4\\02_uv_..stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 1963,
+            "path": "evidence\\phase4\\02_uv_..stdout.log",
+            "sha256": "379b41c88a7aa073a8ee88a798b491d36ba50bd4293ef50e275bd53345bc002d"
+          }
+        }
+      ],
+      "phase": "phase4",
+      "status": "PASS"
+    },
+    {
+      "commands": [
+        {
+          "argv": [
+            "uv",
+            "run",
+            "pytest",
+            "tests/integration/test_domain_adapters.py",
+            "tests/integration/test_cli.py",
+            "-q"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:04:28.767319+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 1,
+          "started_at": "2026-10-26T11:03:55.110194+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase5\\01_uv_-q.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 101,
+            "path": "evidence\\phase5\\01_uv_-q.stdout.log",
+            "sha256": "4ba8e13371db39ca655e86107f0cd9aed7bf0170c2113f3c3b34ae677690f719"
+          }
+        },
+        {
+          "argv": [
+            "uv",
+            "run",
+            "python",
+            "scripts/verify_install.py"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:05:07.887694+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 2,
+          "started_at": "2026-10-26T11:04:28.854501+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\phase5\\02_uv_scripts_verify_install.py.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 27464,
+            "path": "evidence\\phase5\\02_uv_scripts_verify_install.py.stdout.log",
+            "sha256": "26922126422eca23e2629da3e958f8828db4b43d2c1b1a3dc6e201c8a0ddcb24"
+          }
+        }
+      ],
+      "phase": "phase5",
+      "status": "PASS"
+    },
+    {
+      "commands": [
+        {
+          "argv": [
+            "uv",
+            "run",
+            "python",
+            "scripts/make_demo_delivery.py"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:22:12.340998+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 1,
+          "started_at": "2026-10-26T11:22:00.379830+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\delivery\\01_uv_scripts_make_demo_delivery.py.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 563,
+            "path": "evidence\\delivery\\01_uv_scripts_make_demo_delivery.py.stdout.log",
+            "sha256": "25556dddffa467bb1885cda21ef65da69d0328a6f667fb07d9d788ccffba3303"
+          }
+        }
+      ],
+      "phase": "delivery",
+      "status": "PASS"
+    },
+    {
+      "commands": [
+        {
+          "argv": [
+            "uv",
+            "run",
+            "ruff",
+            "check",
+            "src",
+            "tests"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:13:54.448825+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 1,
+          "started_at": "2026-10-26T11:13:54.258743+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\final\\01_uv_tests.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 20,
+            "path": "evidence\\final\\01_uv_tests.stdout.log",
+            "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+          }
+        },
+        {
+          "argv": [
+            "uv",
+            "run",
+            "pytest",
+            "-q",
+            "--junitxml=evidence/final/junit.xml",
+            "--cov=forgeflow",
+            "--cov-report=json:evidence/final/coverage.json",
+            "--cov-report=xml:evidence/final/coverage.xml"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:19:34.417471+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 2,
+          "started_at": "2026-10-26T11:13:54.547203+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\final\\02_uv_--cov-report_xml_evidence_fina.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 558,
+            "path": "evidence\\final\\02_uv_--cov-report_xml_evidence_fina.stdout.log",
+            "sha256": "3a2fe0cc054636700f4887cae8bb43812e80fca23561fffc05bf690cd405b090"
+          }
+        },
+        {
+          "argv": [
+            "uv",
+            "run",
+            "forge",
+            "doctor",
+            "--json"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:19:39.232443+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 3,
+          "started_at": "2026-10-26T11:19:34.517955+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\final\\03_uv_--json.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 3888,
+            "path": "evidence\\final\\03_uv_--json.stdout.log",
+            "sha256": "bb796621cfd906907b3689b69fe6c1c531c87623a1d7ac97e9fc2a658040006c"
+          }
+        },
+        {
+          "argv": [
+            "git",
+            "status",
+            "--short"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:19:39.476778+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 4,
+          "started_at": "2026-10-26T11:19:39.328100+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\final\\04_git_--short.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 14,
+            "path": "evidence\\final\\04_git_--short.stdout.log",
+            "sha256": "8f40f090997cde1e2af793cf444e4ab0b20d27d352e367e7ca1fc847dce25258"
+          }
+        },
+        {
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD"
+          ],
+          "cwd": "E:\\Projects\\ForgeFlow",
+          "ended_at": "2026-10-26T11:19:39.712849+00:00",
+          "exit_code": 0,
+          "git_dirty_after": true,
+          "git_dirty_before": true,
+          "git_sha_after": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "git_sha_before": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+          "index": 5,
+          "started_at": "2026-10-26T11:19:39.572987+00:00",
+          "status": "PASS",
+          "stderr": {
+            "bytes": 0,
+            "path": "evidence\\final\\05_git_HEAD.stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 42,
+            "path": "evidence\\final\\05_git_HEAD.stdout.log",
+            "sha256": "88746a07ea10b5d0721fefe438824737d8ccfafddd26654f13af389e2540e795"
+          }
+        }
+      ],
+      "phase": "final",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "workspace": "E:\\Projects\\ForgeFlow"
+}

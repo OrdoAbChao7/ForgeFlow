@@ -1,0 +1,33 @@
+                                                                               
+ Usage: forge [OPTIONS] COMMAND [ARGS]...                                      
+                                                                               
+ ForgeFlow 2.0 - durable, verifiable and evaluable AI coding harness.          
+                                                                               
+┌─ Options ───────────────────────────────────────────────────────────────────┐
+│ --version  -V        Show version and exit.                                 │
+│ --help               Show this message and exit.                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+┌─ Commands ──────────────────────────────────────────────────────────────────┐
+│ init       Initialize ForgeFlow state without overwriting project files.    │
+│ goal       Compile and persist a goal, revision and dependency DAG.         │
+│ plan       Show the hard-dependency DAG, waves and ready frontier.          │
+│ run        Execute the ready frontier with independent verification.        │
+│ quick      Compile a risk-scoped quick plan and run it (gates are never     │
+│            skipped).                                                        │
+│ status     Show durable task, gate and recovery status.                     │
+│ verify     Run trusted verifier commands and evaluate all contract gates.   │
+│ resume     Recover expired leases and requeue safely resumable work.        │
+│ recover    Inspect interrupted/blocked tasks and required manual actions.   │
+│ context    Build an explainable, budgeted context bundle.                   │
+│ explain    Trace which test and source version support one acceptance       │
+│            criterion.                                                       │
+│ pause      Pause a running goal without losing task leases or events.       │
+│ cancel     Cancel a goal and all unfinished tasks.                          │
+│ benchmark  Run the reproducible internal fixture benchmark and ablations.   │
+│ deliver    Build a READY/BLOCKED delivery manifest and evidence index.      │
+│ doctor     Check toolchain, persistence, git and external integration       │
+│            readiness.                                                       │
+│ events     Inspect append-only domain events.                               │
+│ policy     Offline policy validation, activation and rollback.              │
+└─────────────────────────────────────────────────────────────────────────────┘
+

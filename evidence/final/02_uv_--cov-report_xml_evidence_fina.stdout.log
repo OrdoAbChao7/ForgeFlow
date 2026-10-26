@@ -1,0 +1,9 @@
+........................................................................ [ 64%]
+........................................                                 [100%]
+----- generated xml file: E:\Projects\ForgeFlow\evidence\final\junit.xml ------
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.12-final-0 _______________
+
+Coverage XML written to file evidence/final/coverage.xml
+Coverage JSON written to file evidence/final/coverage.json
+112 passed in 338.33s (0:05:38)
