@@ -18,7 +18,7 @@
     "ruff": "ruff 0.17.2",
     "uv": "uv 0.12.5 (210d1f678 2026-08-14 x86_64-pc-windows-msvc)",
     "verilator": "MISSING",
-    "workspace": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-0nuhjqng"
+    "workspace": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-hibhf8q2"
   },
   "evidence_index": [
     {
@@ -29,20 +29,20 @@
         "-q",
         "tests"
       ],
-      "attempt_id": "attempt_ad1b543ae6fc4f6097658cac9d16985f",
-      "created_at": "2026-10-26T11:22:03.770704+00:00",
+      "attempt_id": "attempt_70d0fd7568ef481cbbdca776ccb459cb",
+      "created_at": "2026-10-26T11:46:39.188785+00:00",
       "env_digest": "02e32fe123f8cc6f8b7888f0474da925f6c804bb0c08e72d7c937950ee0f7d2f",
       "exit_code": 0,
       "gate": "unit",
-      "id": "ev_26bb116e895e4b839abdf103abb5860a",
-      "log_dir": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-0nuhjqng\\.forge\\runs\\run_f7a4bf6ffa1d4372980f2573310e44fe\\result.json",
-      "report_sha256": "a2add39a81eb2de5a856832b486a843cc752a377a7844ba2d6c0989529564bc9",
+      "id": "ev_202f788ce1df4c5194544292f3195b9d",
+      "log_dir": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-hibhf8q2\\.forge\\runs\\run_e7e4c7e81a9f400cb8c84d7abb7f1058\\result.json",
+      "report_sha256": "850b4637e288ee728ad483abf206aee2f5ae8c054e02b99185cf48ffbbc39e21",
       "runner_kind": "command_runner",
       "scope": [
         "adds"
       ],
       "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
-      "task_id": "task_27fba1eaa6dec0456318",
+      "task_id": "task_0336ad672f366492eb6f",
       "trust": "trusted_runner"
     },
     {
@@ -54,13 +54,13 @@
         "tests"
       ],
       "attempt_id": null,
-      "created_at": "2026-10-26T11:22:09.136934+00:00",
+      "created_at": "2026-10-26T11:46:44.513075+00:00",
       "env_digest": "02e32fe123f8cc6f8b7888f0474da925f6c804bb0c08e72d7c937950ee0f7d2f",
       "exit_code": 0,
       "gate": "unit",
-      "id": "ev_734716bdd3334d35a32731db95da977a",
-      "log_dir": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-0nuhjqng\\.forge\\runs\\run_3ba415b05cf7427b8d9c66ccc50aae64\\result.json",
-      "report_sha256": "ce5bb479d24a867ee2107177486153ec72c13c2b60db076ae5925fd38212bafb",
+      "id": "ev_24591b4ebeac40faa67091edf42bfe39",
+      "log_dir": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-hibhf8q2\\.forge\\runs\\run_b1c2cda09293463280be43453b1d6959\\result.json",
+      "report_sha256": "c43359e199e068f7c9a7bbd1e180c5a9735294484693a635cea202c84eff0570",
       "runner_kind": "command_runner",
       "scope": [
         "adds"
@@ -78,15 +78,15 @@
   "gates": [
     {
       "criterion_id": "adds",
-      "evaluated_at": "2026-10-26T11:22:10.185980Z",
+      "evaluated_at": "2026-10-26T11:46:45.527514Z",
       "evidence_ids": [
-        "ev_26bb116e895e4b839abdf103abb5860a",
-        "ev_734716bdd3334d35a32731db95da977a"
+        "ev_202f788ce1df4c5194544292f3195b9d",
+        "ev_24591b4ebeac40faa67091edf42bfe39"
       ],
       "gate": "unit",
-      "goal_id": "goal_fa80ac8793eb4836b8e6a66c70386c72",
+      "goal_id": "goal_7e845fe547fe4af5b12c5b2135a54d4c",
       "goal_revision": 1,
-      "id": "gate_424e7facf9ec4488a11861161e2070d6",
+      "id": "gate_c50fcf49e5924a9084a6bcef95315364",
       "policy_version": "delivery-demo-v1",
       "reason": "2 trusted evidence record(s) cover ['adds']",
       "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
@@ -94,29 +94,29 @@
     },
     {
       "criterion_id": null,
-      "evaluated_at": "2026-10-26T11:22:10.199775Z",
+      "evaluated_at": "2026-10-26T11:46:45.540609Z",
       "evidence_ids": [
-        "ev_26bb116e895e4b839abdf103abb5860a",
-        "ev_734716bdd3334d35a32731db95da977a"
+        "ev_202f788ce1df4c5194544292f3195b9d",
+        "ev_24591b4ebeac40faa67091edf42bfe39"
       ],
       "gate": "unit",
-      "goal_id": "goal_fa80ac8793eb4836b8e6a66c70386c72",
+      "goal_id": "goal_7e845fe547fe4af5b12c5b2135a54d4c",
       "goal_revision": 1,
-      "id": "gate_2deadca1705d4ca69ddd2365494301dc",
+      "id": "gate_67551a3dbc10425aa3f078462f03a8c9",
       "policy_version": "delivery-demo-v1",
       "reason": "2 trusted evidence record(s) cover ['adds']",
       "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
       "status": "PASS"
     }
   ],
-  "generated_at": "2026-10-26T11:22:10.221433Z",
-  "git_sha": "af382c33a8e145528fd73bce8cda697fdbdf6462",
-  "goal_id": "goal_fa80ac8793eb4836b8e6a66c70386c72",
+  "generated_at": "2026-10-26T11:46:45.564679Z",
+  "git_sha": "55a40807605873e0af23bd1ab46fc05af6a85d53",
+  "goal_id": "goal_7e845fe547fe4af5b12c5b2135a54d4c",
   "goal_title": "Delivery demo",
   "regeneration_commands": [
-    "forge verify goal_fa80ac8793eb4836b8e6a66c70386c72",
-    "forge verify goal_fa80ac8793eb4836b8e6a66c70386c72 --clean-room",
-    "forge deliver goal_fa80ac8793eb4836b8e6a66c70386c72"
+    "forge verify goal_7e845fe547fe4af5b12c5b2135a54d4c",
+    "forge verify goal_7e845fe547fe4af5b12c5b2135a54d4c --clean-room",
+    "forge deliver goal_7e845fe547fe4af5b12c5b2135a54d4c"
   ],
   "revision": 1,
   "source_fingerprint": "6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152",
@@ -134,18 +134,18 @@
       "id": "unit",
       "observations": [
         {
-          "evidence_id": "ev_26bb116e895e4b839abdf103abb5860a",
+          "evidence_id": "ev_202f788ce1df4c5194544292f3195b9d",
           "exit_code": 0,
-          "report_sha256": "a2add39a81eb2de5a856832b486a843cc752a377a7844ba2d6c0989529564bc9",
+          "report_sha256": "850b4637e288ee728ad483abf206aee2f5ae8c054e02b99185cf48ffbbc39e21",
           "stdout_sha256": "db80ef13e92e5f4207aae7adf10abb9db0cc7dfaccd870dc2654e9a9a25ec009",
           "timed_out": false,
           "trust": "trusted_runner"
         },
         {
-          "evidence_id": "ev_734716bdd3334d35a32731db95da977a",
+          "evidence_id": "ev_24591b4ebeac40faa67091edf42bfe39",
           "exit_code": 0,
-          "report_sha256": "ce5bb479d24a867ee2107177486153ec72c13c2b60db076ae5925fd38212bafb",
-          "stdout_sha256": "88bd8dfdb7a94b6010ba5e505610de7af6f1c0243a48a0fdf1fe146c619a4fa4",
+          "report_sha256": "c43359e199e068f7c9a7bbd1e180c5a9735294484693a635cea202c84eff0570",
+          "stdout_sha256": "db80ef13e92e5f4207aae7adf10abb9db0cc7dfaccd870dc2654e9a9a25ec009",
           "timed_out": false,
           "trust": "trusted_runner"
         }

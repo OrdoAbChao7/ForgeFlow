@@ -93,7 +93,7 @@ not on the critical path; they are represented by contract tests and BLOCKED sta
 | P5.5 | CLI commands and JSON outputs | all | [x] | `forge --help`, CLI E2E |
 | P5.6 | README, CONTRIBUTING, CHANGELOG, CI, runbooks, examples | P5.4 | [x] | repo docs and `.github/workflows/ci.yml` |
 | P5.7 | Clean wheel install and clean-environment E2E | P5.4 | [x] | `scripts/verify_install.py`, `evidence/phase5` |
-| P5.8 | Full test/fault-injection/security/independent review and manifest | P5.7 | [x] | `REVIEW.md`; `evidence/manifest.json` PASS; 112 tests, coverage 79.14%, delivery READY |
+| P5.8 | Full test/fault-injection/security/independent review and manifest | P5.7 | [x] | `REVIEW.md`; `evidence/manifest.json` PASS; 113 tests, coverage 79.27%, delivery READY |
 
 ## Risks
 

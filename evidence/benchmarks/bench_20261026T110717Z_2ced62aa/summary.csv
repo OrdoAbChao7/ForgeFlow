@@ -1,8 +1,0 @@
-mode,group,description,context_mode,recovery_enabled,reviewer_enabled,parallel_enabled,runs,verified_successes,verified_success_rate,false_completion_rate,cost_usd,cost_per_verified_task,avg_tokens,avg_latency_seconds,recovery_case_success_rate
-C_core,C,ForgeFlow core: structure context + recovery,structure,True,False,False,4,4,1.0,0.5,0.0,0.0,449.0,11.0548,1.0
-D_full,D,ForgeFlow full: core + static reviewer,structure,True,True,False,4,4,1.0,0.5,0.0,0.0,449.0,11.0312,1.0
-ablation_no_context,ablation,context disabled,none,True,False,False,4,0,0.0,1.0,0.0,,619.5,16.6442,0.0
-ablation_no_recovery,ablation,recovery disabled,structure,False,False,False,4,2,0.5,0.5,0.0,0.0,283.0,9.383,0.0
-ablation_full_file,ablation,whole-file context,full_file,True,False,False,4,4,1.0,0.5,0.0,0.0,446.5,11.8283,1.0
-ablation_keyword,ablation,keyword context,keyword,True,False,False,4,4,1.0,0.5,0.0,0.0,486.5,12.098,1.0
-ablation_diff_only,ablation,diff-only context,diff_only,True,False,False,4,0,0.0,1.0,0.0,,712.5,17.5895,0.0

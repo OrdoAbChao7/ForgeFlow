@@ -32,4 +32,5 @@ uv run forge explain adds --goal <goal-id> --json
 
 returns task/attempt/code snapshot/test run/evidence/gate/artifact edge data. Logs and
 report hashes are included. Clean-room evidence additionally records the trusted snapshot
-commit, isolated workspace path and protected files restored.
+commit, isolated workspace path, protected files restored, setup mode and whether locked
+dependencies were reinstalled (`uv sync --frozen` when lock files are present).

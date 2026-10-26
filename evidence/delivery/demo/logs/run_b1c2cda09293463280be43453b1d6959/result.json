@@ -1,0 +1,28 @@
+{
+  "approved_by": null,
+  "argv": [
+    "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "tests"
+  ],
+  "capture_incomplete": false,
+  "command_display": "'E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe' -m pytest -q tests",
+  "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-hibhf8q2",
+  "duration_seconds": 0.641,
+  "ended_at": "2026-10-26T11:46:44.506441+00:00",
+  "exit_code": 0,
+  "output_truncated": false,
+  "pid": 44660,
+  "purpose": "goal-verifier:unit",
+  "result_path": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-hibhf8q2\\.forge\\runs\\run_b1c2cda09293463280be43453b1d6959\\result.json",
+  "result_sha256": "6c56c6e4502df5ee889a311febdfbf8a93d09def8f855b2eaa91c06be04a092b",
+  "run_id": "run_b1c2cda09293463280be43453b1d6959",
+  "started_at": "2026-10-26T11:46:43.865841+00:00",
+  "stderr_path": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-hibhf8q2\\.forge\\runs\\run_b1c2cda09293463280be43453b1d6959\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_path": "C:\\Users\\32583\\AppData\\Local\\Temp\\forgeflow-delivery-demo-hibhf8q2\\.forge\\runs\\run_b1c2cda09293463280be43453b1d6959\\stdout.txt",
+  "stdout_sha256": "db80ef13e92e5f4207aae7adf10abb9db0cc7dfaccd870dc2654e9a9a25ec009",
+  "timed_out": false
+}

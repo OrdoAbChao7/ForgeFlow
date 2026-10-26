@@ -25,7 +25,7 @@
       "status": "PASS"
     },
     {
-      "detail": "d4f3625e593cd9fcd9de6a0b2e00ae8711bdd7b1",
+      "detail": "eefddc013e4e171bc4395e93c76dabca1f5b50cb",
       "name": "git_repository",
       "remediation": "run `git init` for commit-bound evidence and clean-room verification",
       "status": "PASS"

@@ -1,0 +1,28 @@
+{
+  "approved_by": null,
+  "argv": [
+    "E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "tests"
+  ],
+  "capture_incomplete": false,
+  "command_display": "'E:\\Projects\\ForgeFlow\\.venv\\Scripts\\python.exe' -m pytest -q tests",
+  "cwd": "C:\\Users\\32583\\AppData\\Local\\Temp\\ffbench-n930_i_f",
+  "duration_seconds": 0.703,
+  "ended_at": "2026-10-26T11:44:07.643847+00:00",
+  "exit_code": 0,
+  "output_truncated": false,
+  "pid": 28692,
+  "purpose": "verifier:unit-tests",
+  "result_path": "C:\\Users\\32583\\AppData\\Local\\Temp\\ffbench-n930_i_f\\.forge\\runs\\run_ba20cba5d66f42c79fe3f85e1275af9f\\result.json",
+  "result_sha256": "2b90616cbd69f0adf5af5ca27cff9348fe6e46b8b39af53297202e0259fe976e",
+  "run_id": "run_ba20cba5d66f42c79fe3f85e1275af9f",
+  "started_at": "2026-10-26T11:44:06.940235+00:00",
+  "stderr_path": "C:\\Users\\32583\\AppData\\Local\\Temp\\ffbench-n930_i_f\\.forge\\runs\\run_ba20cba5d66f42c79fe3f85e1275af9f\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_path": "C:\\Users\\32583\\AppData\\Local\\Temp\\ffbench-n930_i_f\\.forge\\runs\\run_ba20cba5d66f42c79fe3f85e1275af9f\\stdout.txt",
+  "stdout_sha256": "2cae6438afb5a2b238f9baa91ec19955b0b824036a3449af9e0e31461af32012",
+  "timed_out": false
+}

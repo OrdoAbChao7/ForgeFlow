@@ -44,7 +44,9 @@ implementation, not aspirational architecture.
 - **Decision**: build a temporary index with `GIT_INDEX_FILE`, `git add -A`,
   `write-tree`, `commit-tree`, extract with `git archive`; restore protected paths from
   the goal's immutable baseline commit; reject protected-file drift (including committed
-  drift); compare prepared and live source fingerprints before recording evidence.
+  drift); automatically run `uv sync --frozen` for `pyproject.toml` + `uv.lock` unless an
+  explicit setup command is provided; compare prepared and live source fingerprints before
+  recording evidence.
 - **Consequence**: text line endings are LF-normalized for fingerprints because Windows
   Git may check out CRLF. Binaries are hashed exactly.
 - **Rollback**: delete clean-room evidence and rerun verifier; local Docker path remains

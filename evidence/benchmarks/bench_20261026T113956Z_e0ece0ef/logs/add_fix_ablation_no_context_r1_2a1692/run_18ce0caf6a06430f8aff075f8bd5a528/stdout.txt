@@ -1,0 +1,22 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+______________________________ test_add_positive ______________________________
+
+    def test_add_positive():
+>       assert add(2, 3) == 5
+E       assert -1 == 5
+E        +  where -1 = add(2, 3)
+
+tests\test_calc.py:5: AssertionError
+________________________________ test_add_zero ________________________________
+
+    def test_add_zero():
+>       assert add(-1, 1) == 0
+E       assert -2 == 0
+E        +  where -2 = add(-1, 1)
+
+tests\test_calc.py:9: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_calc.py::test_add_positive - assert -1 == 5
+FAILED tests/test_calc.py::test_add_zero - assert -2 == 0
+2 failed in 0.38s

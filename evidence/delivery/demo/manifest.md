@@ -1,19 +1,19 @@
 # ForgeFlow delivery: Delivery demo
 
 - State: **READY**
-- Goal: `goal_fa80ac8793eb4836b8e6a66c70386c72` revision 1
+- Goal: `goal_7e845fe547fe4af5b12c5b2135a54d4c` revision 1
 - ForgeFlow: 2.0.0
-- Git SHA: `af382c33a8e145528fd73bce8cda697fdbdf6462`
+- Git SHA: `55a40807605873e0af23bd1ab46fc05af6a85d53`
 - Source fingerprint: `6dfd4f011272350c414e6a7a29fff3d296e5708525aaaacf697d9f7ba1de9152`
-- Manifest SHA-256: `beec1f86e601a5ad578b6c3060576487f51e8571ab2ddf3db06db2d764e0f339`
-- Generated: 2026-10-26T11:22:10.221433+00:00
+- Manifest SHA-256: `b698816a5761890d86f597d6f53aeecf3e1ba7420ab6e46a03938853da040fd8`
+- Generated: 2026-10-26T11:46:45.564679+00:00
 
 ## Gates
 
 | Gate | Criterion | Status | Evidence | Reason |
 |---|---|---|---|---|
-| unit | adds | **PASS** | ev_26bb116e895e4b839abdf103abb5860a, ev_734716bdd3334d35a32731db95da977a | 2 trusted evidence record(s) cover ['adds'] |
-| unit | - | **PASS** | ev_26bb116e895e4b839abdf103abb5860a, ev_734716bdd3334d35a32731db95da977a | 2 trusted evidence record(s) cover ['adds'] |
+| unit | adds | **PASS** | ev_202f788ce1df4c5194544292f3195b9d, ev_24591b4ebeac40faa67091edf42bfe39 | 2 trusted evidence record(s) cover ['adds'] |
+| unit | - | **PASS** | ev_202f788ce1df4c5194544292f3195b9d, ev_24591b4ebeac40faa67091edf42bfe39 | 2 trusted evidence record(s) cover ['adds'] |
 
 ## Test commands
 
@@ -32,9 +32,9 @@
 
 ## Regeneration
 
-- `forge verify goal_fa80ac8793eb4836b8e6a66c70386c72`
-- `forge verify goal_fa80ac8793eb4836b8e6a66c70386c72 --clean-room`
-- `forge deliver goal_fa80ac8793eb4836b8e6a66c70386c72`
+- `forge verify goal_7e845fe547fe4af5b12c5b2135a54d4c`
+- `forge verify goal_7e845fe547fe4af5b12c5b2135a54d4c --clean-room`
+- `forge deliver goal_7e845fe547fe4af5b12c5b2135a54d4c`
 
 > SHA-256 establishes integrity, not signer identity. This manifest is not a
 > cryptographic signature and must not be treated as a trust root.
