@@ -50,7 +50,7 @@ corresponding regression tests.
 - Delivery: `evidence/delivery/demo/manifest.json`, state **READY**, SHA-256
   `b698816a5761890d86f597d6f53aeecf3e1ba7420ab6e46a03938853da040fd8`.
 - Clean wheel install: SHA-256
-  `84ea0325b447d6e3c46be281d5ce40fcee686d6e74c05001ef2aa9bf69419f7a`,
+  `6cff9b750581c4483ba2207b416feca00f160ac476afbbefb2c262cfd78991b5`,
   version 2.0.0, doctor `PASS_WITH_BLOCKERS`, real pytest verify PASS, delivery READY.
 - `ruff check src tests`: PASS (`evidence/final/01_uv_tests.stdout.log`).
 - Benchmark: `bench_20261026T113956Z_e0ece0ef`; C/D and structure/full-file/keyword
