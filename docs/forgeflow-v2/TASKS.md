@@ -51,7 +51,7 @@ not on the critical path; they are represented by contract tests and BLOCKED sta
 | P2.2 | Gate engine PENDING/PASS/FAIL/BLOCKED/STALE, scope and policy version | P2.1 | [x] | gate tests, `forge verify` |
 | P2.3 | Incremental invalidation after source/test/env/tool change | P2.2 | [x] | `test_evidence_goes_stale_after_source_change` |
 | P2.4 | Provenance query Goal→…→Gate→Artifact | P2.2 | [x] | `evidence_provenance`, `forge explain` |
-| P2.5 | Clean-room snapshot, protected-file restore, isolated rerun | P2.1 | [x] | `test_clean_room_reverification`, `--clean-room` |
+| P2.5 | Clean-room snapshot, protected-file restore, locked deps, isolated rerun | P2.1 | [x] | `test_clean_room_reverification`, `test_clean_room_auto_reinstalls_locked_dependencies` |
 | P2.6 | Forged stdout/test-tamper/cross-version/self-report security cases | P2.2 | [x] | security tests |
 | P2.7 | “self-report blocked → trusted PASS → stale → clean-room” demonstration | P2.5 | [x] | E2E tests and final evidence |
 

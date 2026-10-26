@@ -12,8 +12,9 @@
   protected verifier files, environment, command, exit code and policy version.
 - Gate engine with PASS/FAIL/BLOCKED/STALE, incremental invalidation and
   `forge explain` criterion provenance.
-- Clean-room verifier using a private Git index snapshot, protected-file restore and
-  isolated trusted rerun; optional Docker path reports EXTERNAL_BLOCKED when unavailable.
+- Clean-room verifier using a private Git index snapshot, protected-file restore,
+  automatic locked-dependency sync (`uv sync --frozen`) and isolated trusted rerun;
+  optional Docker path reports EXTERNAL_BLOCKED when unavailable.
 - Tree-sitter Python/TypeScript context, Git-diff symbol ranking, configurable weights,
   SQLite incremental cache, budgets, explanations and five comparison modes.
 - Agent boundaries: deterministic Mock, Pi RPC JSONL, Claude Code CLI stream-json,

@@ -71,6 +71,7 @@ _TEXT_LIKE_SUFFIXES = {
     ".txt",
     ".rst",
     ".toml",
+    ".lock",
     ".yaml",
     ".yml",
     ".json",

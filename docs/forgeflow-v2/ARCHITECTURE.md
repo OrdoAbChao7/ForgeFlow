@@ -133,7 +133,9 @@ signature verifier.
 
 `CleanRoomVerifier` creates a private-index Git commit of the worktree without changing
 the real index, extracts it into a temporary directory, restores protected verifier files
-from the goal's immutable baseline commit, runs the trusted verifier config, and records
+from the goal's immutable baseline commit, automatically runs `uv sync --frozen` when
+`pyproject.toml` + `uv.lock` are present (unless an explicit setup command is supplied),
+runs the trusted verifier config, and records
 `clean_room` evidence only if the clean-room operation succeeds and the prepared source
 fingerprint matches the live workspace. Protected-file changes (including committed
 changes), missing tools or dependency setup failure yield a failed report, and clean-room

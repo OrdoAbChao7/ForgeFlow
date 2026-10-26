@@ -36,6 +36,8 @@ class CleanRoomReport:
     errors: list[str] = field(default_factory=list)
     protected_restored: list[str] = field(default_factory=list)
     docker_used: bool = False
+    locked_dependencies_reinstalled: bool = False
+    setup_mode: str | None = None
 
     def as_dict(self) -> dict[str, Any]:
         return {
@@ -48,6 +50,8 @@ class CleanRoomReport:
             "errors": self.errors,
             "protected_restored": self.protected_restored,
             "docker_used": self.docker_used,
+            "locked_dependencies_reinstalled": self.locked_dependencies_reinstalled,
+            "setup_mode": self.setup_mode,
         }
 
 
@@ -208,12 +212,21 @@ class CleanRoomVerifier:
                 allow_network=self.spec.verifier.network,
             )
             runner = CommandRunner(clean, log_root=log_root, policy=policy)
-            if self.spec.verifier.setup_argv:
+            setup_argv = self.spec.verifier.setup_argv
+            auto_locked_setup = False
+            if (
+                setup_argv is None
+                and (clean / "pyproject.toml").is_file()
+                and (clean / "uv.lock").is_file()
+            ):
+                setup_argv = ["uv", "sync", "--frozen"]
+                auto_locked_setup = True
+            if setup_argv:
                 env = {"UV_OFFLINE": "1"} if not self.spec.verifier.network else {}
                 try:
                     setup = runner.run(
                         RunRequest(
-                            argv=list(self.spec.verifier.setup_argv),
+                            argv=list(setup_argv),
                             cwd=clean,
                             purpose="cleanroom_setup",
                             timeout_seconds=600,
@@ -231,6 +244,10 @@ class CleanRoomVerifier:
                         f"clean-room dependency setup failed with exit code {setup.exit_code}"
                     )
                     return report
+                report.locked_dependencies_reinstalled = True
+                report.setup_mode = (
+                    "uv-frozen" if auto_locked_setup else "explicit"
+                )
             commands = self.spec.verifier.commands
             if command_ids:
                 commands = [command for command in commands if command.id in set(command_ids)]
@@ -280,6 +297,8 @@ class CleanRoomVerifier:
                         "trusted_commit": snapshot["commit"],
                         "protected_restored": report.protected_restored,
                         "docker_used": False,
+                        "locked_dependencies_reinstalled": report.locked_dependencies_reinstalled,
+                        "setup_mode": report.setup_mode,
                         "isolated_workspace": str(clean),
                     },
                 )

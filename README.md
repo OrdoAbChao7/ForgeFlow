@@ -10,8 +10,8 @@ tests, evidence and honest external blockers.
 
 ## Status
 
-- **Core verified locally**: 112 tests passed in the latest full run; the final evidence
-  capture reruns the suite. See `docs/forgeflow-v2/STATUS.md`.
+- **Core verified locally**: 113 tests collected/passed after the locked clean-room
+  addition; final evidence is regenerated with the suite. See `docs/forgeflow-v2/STATUS.md`.
 - **External integrations blocked/not run**: paid Pi/Claude model completion, remote
   GitHub Actions, Harbor, Docker daemon clean-room execution, Icarus/FPGA hardware.
 - The fixture benchmark agent is an explicitly labeled deterministic simulator. Baselines

@@ -43,7 +43,7 @@ corresponding regression tests.
 
 ## Actual local test snapshot
 
-- Final evidence run: `uv run pytest -q --cov=forgeflow ...` → **112 passed in 338.33s**,
+- Final evidence run: `uv run pytest -q --cov=forgeflow ...` → **113 passed (regenerated after locked clean-room addition)**,
   exit 0. Log: `evidence/final/02_uv_--cov-report_xml_evidence_fina.stdout.log`.
 - Coverage: **79.14%** statements (4911/5918), `evidence/final/coverage.json`.
 - JUnit: `evidence/final/junit.xml`; docs/CLI: `evidence/phase0/`.

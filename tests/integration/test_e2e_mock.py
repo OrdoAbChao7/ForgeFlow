@@ -3,9 +3,12 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
 from forgeflow.delivery import build_delivery
-from forgeflow.domain.enums import GateStatus, GoalStatus, TaskStatus
+from forgeflow.domain.enums import GateStatus, GoalStatus, TaskStatus, TrustLevel
 from forgeflow.runtime import Harness, RunOptions
+from forgeflow.verification.gates import capture_binding
 from tests.conftest import calc_spec
 
 
@@ -230,3 +233,106 @@ def test_committed_protected_test_tampering_is_blocked(project: Path) -> None:
     assert "protected verifier" in (task.last_error or "")
     assert report.tasks[0].false_completion
     assert not harness.store.list_evidence(goal.id)
+
+def test_clean_room_auto_reinstalls_locked_dependencies(tmp_path: Path) -> None:
+    import shutil
+    import subprocess
+
+    from forgeflow.domain.enums import GateKind
+    from forgeflow.domain.models import (
+        AcceptanceCriterion,
+        GoalSpec,
+        TaskSpec,
+        VerifierCommand,
+        VerifierConfig,
+    )
+    from forgeflow.verification.cleanroom import CleanRoomVerifier
+    from forgeflow.verification.gates import GateEngine
+    from tests.conftest import git, init_repo
+
+    if not shutil.which("uv"):
+        pytest.skip("uv is required for locked clean-room setup")
+    project = init_repo(
+        tmp_path / "locked",
+        {
+            "pyproject.toml": (
+                "[project]\nname=\"cleanfixture\"\nversion=\"0.1.0\"\n"
+                "requires-python=\">=3.11\"\ndependencies=[]\n"
+            ),
+            ".gitignore": ".venv/\n.forge/\n__pycache__/\n.pytest_cache/\n",
+        },
+    )
+    lock = subprocess.run(
+        ["uv", "lock", "--offline"],
+        cwd=project,
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    assert lock.returncode == 0, lock.stderr
+    git(project, "add", "uv.lock")
+    git(project, "commit", "-m", "lock fixture")
+    spec = GoalSpec(
+        title="Locked clean room",
+        objective="Reinstall locked dependencies in isolation",
+        acceptance=[
+            AcceptanceCriterion(
+                id="env", statement="locked venv is present", gate=GateKind.UNIT, required=True
+            )
+        ],
+        tasks=[
+            TaskSpec(
+                key="env-check",
+                title="Check environment",
+                owned_paths=["result.txt"],
+                gates=[GateKind.UNIT],
+                acceptance_ids=["env"],
+            )
+        ],
+        verifier=VerifierConfig(
+            commands=[
+                VerifierCommand(
+                    id="env-check",
+                    gate=GateKind.UNIT,
+                    argv=[
+                        "uv",
+                        "run",
+                        "--frozen",
+                        "--no-sync",
+                        "python",
+                        "-c",
+                        "import sys; from pathlib import Path; "
+                        "assert '.venv' in sys.prefix; assert Path('result.txt').read_text() == 'ok'",
+                    ],
+                    scope=["env"],
+                )
+            ],
+            protected_paths=[],
+            clean_room=True,
+        ),
+    )
+    harness = Harness(project)
+    goal = harness.create_goal(spec)
+    (project / "result.txt").write_text("ok", encoding="utf-8")
+    verifier = CleanRoomVerifier(harness.store, project, spec)
+    report = verifier.verify(goal.id)
+    assert report.success, report.as_dict()
+    assert report.setup_result is not None and report.setup_result.succeeded
+    assert report.setup_mode == "uv-frozen"
+    assert report.locked_dependencies_reinstalled is True
+    assert report.results and report.results[0].succeeded
+    evidence = harness.store.list_evidence(goal.id)
+    assert evidence and evidence[0].trust.value == "clean_room"
+    engine = GateEngine(
+        harness.store,
+        project,
+        spec,
+        binding=capture_binding(project, spec.verifier.protected_paths),
+    )
+    evaluation = engine.evaluate(
+        goal.id,
+        GateKind.UNIT,
+        criterion_id="env",
+        allowed_trust={TrustLevel.CLEAN_ROOM},
+    )
+    assert evaluation.status == GateStatus.PASS
