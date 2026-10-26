@@ -27,7 +27,7 @@ Exact commands, exits, Git SHAs and log SHA-256: `evidence/manifest.json`.
 | G6 | PASS | worktree ownership, bounded parallel, conflict/abort/retry, serial fallback, post-merge regression | `evidence/phase4/` |
 | G7 | PASS | OTel scrubbed spans/local fallback, benchmark raw data, context/recovery/reviewer/parallel ablations; A/B NOT_RUN, Harbor EXTERNAL_BLOCKED | `evidence/phase4/`, `evidence/benchmarks/` |
 | G8 | PASS | Python adapter real tools, FPGA fixture parsers/artifact/hardware status, agent-app demo | `evidence/phase5/`, `examples/` |
-| G9 | PASS (local) | full tests, ruff, docs, clean install, READY delivery manifest and blocker list consistent. Remote GitHub Actions is `NOT_RUN`. | `evidence/final/`, `evidence/delivery/demo/` |
+| G9 | PASS | full tests, ruff, docs, clean install, READY delivery manifest and blocker list consistent. Remote GitHub Actions run `40325860472` at `521ec28` passed all 4 OS/Python jobs. | `evidence/final/`, `evidence/delivery/demo/`, `evidence/ci/github-actions.json` |
 
 Local core is verified; external integrations are blocked. Overall is **not** a claim of
 100% production completion.
@@ -60,6 +60,14 @@ corresponding regression tests.
 - Real external checks: Pi RPC handshake (no model prompt), Claude version/auth probe
   (no paid completion), Docker daemon unavailable, Harbor/Icarus/Verilator missing.
 
+## GitHub repository
+
+- URL: <https://github.com/OrdoAbChao7/ForgeFlow>
+- Visibility: private
+- Default branch: `main`
+- Remote CI: run `40325860472` at `521ec28`, conclusion `success` across
+  Ubuntu/Windows × Python 3.11/3.13.
+
 ## Environment
 
 - Windows 11, Python 3.13 for development; project supports >=3.11.
@@ -72,7 +80,7 @@ corresponding regression tests.
 | Item | State | Minimum human action |
 |---|---|---|
 | Real Pi/Claude model completion | BLOCKED / NOT_RUN | approve paid usage, then run `forge run --agent pi_rpc|claude_cli --allow-paid` |
-| GitHub CI remote execution | NOT_RUN | push branch and let `.github/workflows/ci.yml` run |
+| GitHub CI remote execution | PASS | run `40325860472`, 4/4 matrix jobs success; see `evidence/ci/github-actions.json` |
 | Harbor comparison | EXTERNAL_BLOCKED | install/configure Harbor and run a real suite |
 | Docker clean-room | EXTERNAL_BLOCKED | start Docker daemon and implement/validate container execution path |
 | FPGA simulation | BLOCKED | install Icarus and run RTL simulation |

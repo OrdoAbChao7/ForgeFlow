@@ -139,6 +139,7 @@ def collect_artifacts() -> list[dict[str, Any]]:
         "evidence/final/coverage.json",
         "evidence/final/coverage.xml",
         "evidence/final/junit.xml",
+        "evidence/ci/github-actions.json",
         "evidence/delivery/demo/manifest.json",
         "evidence/delivery/demo/manifest.md",
         "evidence/delivery/demo/manifest.sha256",

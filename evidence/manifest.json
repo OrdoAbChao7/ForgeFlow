@@ -16,6 +16,11 @@
       "sha256": "3de734694196a4b5cfa8c7193298c953956788a21dd406f2142db4f03ab4c52d"
     },
     {
+      "bytes": 1446,
+      "path": "evidence/ci/github-actions.json",
+      "sha256": "0ac16b13925c45be4e1520b44d82b8fdc09a7452f0bceaa9d38a59b9d9390118"
+    },
+    {
       "bytes": 5949,
       "path": "evidence/delivery/demo/manifest.json",
       "sha256": "b698816a5761890d86f597d6f53aeecf3e1ba7420ab6e46a03938853da040fd8"
@@ -68,9 +73,9 @@
     "python": "3.12.12 (main, Oct 28 2025, 14:15:42) [MSC v.1944 64 bit (AMD64)]"
   },
   "format_version": 1,
-  "generated_at": "2026-10-26T11:53:45.186792+00:00",
+  "generated_at": "2026-10-26T13:01:03.239063+00:00",
   "git_branch": "main",
-  "git_sha": "eefddc013e4e171bc4395e93c76dabca1f5b50cb",
+  "git_sha": "521ec289f4de18d66b651ad7ac857ecbee5691b4",
   "notes": [
     "Each command log is retained locally with SHA-256.",
     "A PASS means the recorded command exited 0; it does not imply external credentials or hardware passed.",

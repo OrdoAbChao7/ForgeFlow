@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-10-26T13:00:44.810145+00:00",
+  "conclusion": "success",
+  "created_at": "2026-10-26T12:52:12Z",
+  "event": "push",
+  "head_branch": "main",
+  "head_sha": "521ec289f4de18d66b651ad7ac857ecbee5691b4",
+  "jobs": [
+    {
+      "conclusion": "success",
+      "name": "windows-latest / Python 3.13",
+      "status": "completed",
+      "url": "https://github.com/OrdoAbChao7/ForgeFlow/actions/runs/40325860472/job/121582239247"
+    },
+    {
+      "conclusion": "success",
+      "name": "ubuntu-latest / Python 3.13",
+      "status": "completed",
+      "url": "https://github.com/OrdoAbChao7/ForgeFlow/actions/runs/40325860472/job/121582239429"
+    },
+    {
+      "conclusion": "success",
+      "name": "windows-latest / Python 3.11",
+      "status": "completed",
+      "url": "https://github.com/OrdoAbChao7/ForgeFlow/actions/runs/40325860472/job/121582239450"
+    },
+    {
+      "conclusion": "success",
+      "name": "ubuntu-latest / Python 3.11",
+      "status": "completed",
+      "url": "https://github.com/OrdoAbChao7/ForgeFlow/actions/runs/40325860472/job/121582239521"
+    }
+  ],
+  "note": "CI run for commit 521ec28; later docs-only commits do not change tested code.",
+  "repository": "OrdoAbChao7/ForgeFlow",
+  "run_id": 40325860472,
+  "source": "GitHub Actions via gh CLI",
+  "status": "completed",
+  "url": "https://github.com/OrdoAbChao7/ForgeFlow/actions/runs/40325860472"
+}
