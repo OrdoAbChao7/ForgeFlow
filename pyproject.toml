@@ -46,8 +46,8 @@ docker = ["docker>=7.1,<8"]
 forge = "forgeflow.cli:app"
 
 [project.urls]
-Documentation = "https://github.com/example/forgeflow"
-Repository = "https://github.com/example/forgeflow"
+Documentation = "https://github.com/OrdoAbChao7/ForgeFlow/tree/main/docs"
+Repository = "https://github.com/OrdoAbChao7/ForgeFlow"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/forgeflow"]

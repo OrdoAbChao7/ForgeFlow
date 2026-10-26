@@ -17,6 +17,11 @@ tests, evidence and honest external blockers.
 - The fixture benchmark agent is an explicitly labeled deterministic simulator. Baselines
   A/B are `NOT_RUN`; Harbor is `EXTERNAL_BLOCKED`. There is no fabricated comparison.
 
+
+## Repository
+
+<https://github.com/OrdoAbChao7/ForgeFlow> (private by default)
+
 ## Install
 
 ```bash
