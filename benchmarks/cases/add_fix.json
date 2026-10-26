@@ -1,0 +1,39 @@
+{
+  "id": "add_fix",
+  "title": "Fix the addition contract",
+  "objective": "Repair calc.py using the ADDITION_RULE contract so the addition tests pass.",
+  "marker": "FIX_ADD_7F3A",
+  "files": {
+    "calc.py": "def add(a, b):\n    return a - b\n",
+    "contract.py": "ADDITION_RULE = \"FIX_ADD_7F3A: add(a, b) must return a + b\"\n",
+    "conftest.py": ""
+  },
+  "solution": {
+    "calc.py": "def add(a, b):\n    return a + b\n"
+  },
+  "bug": {
+    "calc.py": "def add(a, b):\n    return a - b\n"
+  },
+  "tests": {
+    "tests/test_calc.py": "from calc import add\n\n\ndef test_add_positive():\n    assert add(2, 3) == 5\n\n\ndef test_add_zero():\n    assert add(-1, 1) == 0\n"
+  },
+  "protected_paths": ["tests"],
+  "acceptance": [
+    {
+      "id": "adds",
+      "statement": "add(a, b) returns the arithmetic sum",
+      "gate": "unit",
+      "required": true
+    }
+  ],
+  "task": {
+    "key": "fix-add",
+    "title": "Repair add()",
+    "description": "Fix the bug in calc.py based on the ADDITION_RULE contract.",
+    "owned_paths": ["calc.py"],
+    "gates": ["unit"],
+    "acceptance_ids": ["adds"],
+    "max_attempts": 3
+  },
+  "fail_first": false
+}

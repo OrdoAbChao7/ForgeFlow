@@ -1,0 +1,48 @@
+# Template goal for a project containing calc.py and tests/test_calc.py.
+# Replace the verifier argv with your project's trusted command.
+goal:
+  title: Fix addition
+  objective: Make add(a, b) return the arithmetic sum.
+  risk: standard_code
+  constraints:
+    - Do not modify tests/ or verifier configuration.
+  acceptance:
+    - id: adds
+      statement: add(a, b) returns a+b and tests pass
+      gate: unit
+      required: true
+  tasks:
+    - key: fix-add
+      title: Repair add()
+      description: Fix calc.py without changing tests.
+      owned_paths:
+        - calc.py
+      gates:
+        - unit
+      acceptance_ids:
+        - adds
+      max_attempts: 2
+      metadata:
+        mock:
+          files:
+            calc.py: |
+              def add(a, b):
+                  return a + b
+  verifier:
+    policy_version: example-v1
+    protected_paths:
+      - tests
+    clean_room: true
+    network: false
+    commands:
+      - id: unit
+        gate: unit
+        argv:
+          - python
+          - -m
+          - pytest
+          - -q
+          - tests
+        scope:
+          - adds
+        timeout_seconds: 120

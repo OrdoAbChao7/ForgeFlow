@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.pyright/
+
+# ForgeFlow runtime state
+.forge/
+forgeflow.db
+forgeflow.db-shm
+forgeflow.db-wal
+
+# Evidence outputs that are intentionally local unless promoted
+evidence/tmp/
+evidence/runs/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

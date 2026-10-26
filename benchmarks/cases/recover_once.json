@@ -1,0 +1,39 @@
+{
+  "id": "recover_once",
+  "title": "Recover from a failed first repair",
+  "objective": "Repair calc.py using the ADDITION_RULE contract after a failed first attempt.",
+  "marker": "RECOVER_ADD_42B1",
+  "files": {
+    "calc.py": "def add(a, b):\n    return a - b\n",
+    "contract.py": "ADDITION_RULE = \"RECOVER_ADD_42B1: add(a, b) must return a + b\"\n",
+    "conftest.py": ""
+  },
+  "solution": {
+    "calc.py": "def add(a, b):\n    return a + b\n"
+  },
+  "bug": {
+    "calc.py": "def add(a, b):\n    return a * b\n"
+  },
+  "tests": {
+    "tests/test_calc.py": "from calc import add\n\n\ndef test_add_positive():\n    assert add(2, 3) == 5\n\n\ndef test_add_zero():\n    assert add(-1, 1) == 0\n"
+  },
+  "protected_paths": ["tests"],
+  "acceptance": [
+    {
+      "id": "adds",
+      "statement": "add(a, b) returns the arithmetic sum",
+      "gate": "unit",
+      "required": true
+    }
+  ],
+  "task": {
+    "key": "recover-add",
+    "title": "Repair add() with one bounded retry",
+    "description": "First attempt is expected to fail; apply a minimal repair after verification feedback.",
+    "owned_paths": ["calc.py"],
+    "gates": ["unit"],
+    "acceptance_ids": ["adds"],
+    "max_attempts": 3
+  },
+  "fail_first": true
+}

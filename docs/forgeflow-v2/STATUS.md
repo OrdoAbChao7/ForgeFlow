@@ -1,0 +1,81 @@
+# ForgeFlow 2.0 Status
+
+Last updated: 2026-10-26 (evidence capture and final review are recorded below and in
+`evidence/manifest.json`).
+
+## Current phase
+
+Phase 0–5 code, tests, docs and examples are implemented. The local core is verified with
+real command output. Real paid model completion, remote GitHub Actions, Harbor, Docker
+daemon execution, Icarus simulation and FPGA hardware remain unproven/blocked.
+
+Baseline specification commit: `6f8f99b`.
+Implementation/test commit and exact command hashes: see `evidence/manifest.json`.
+
+## Gate table
+
+| Gate | Status | Basis | Evidence |
+|---|---|---|---|
+| G0 | PASS | audit, architecture, ADRs, risk/task DAG, protocol notes, acceptance matrix | `docs/forgeflow-v2/`, `evidence/phase0/` |
+| G1 | PASS | wheel build, fresh venv install, CLI help/doctor, real pytest E2E | `evidence/phase5/`, `scripts/verify_install.py` |
+| G2 | PASS | DAG/claim/lease/event/replay/hard-kill/rollback/side-effect tests | `evidence/phase1/` |
+| G3 | PASS | self-report blocked, trusted PASS, STALE, tamper, clean-room, provenance | `evidence/phase2/`, `evidence/phase0/` |
+| G4 | PASS | Tree-sitter Python/TS, diff symbols, cache, explained budgeted context | `evidence/phase3/` |
+| G5 | BLOCKED | Mock + Pi RPC + Claude contracts complete; Pi real handshake PASS; real model completion not run (paid approval absent) | `evidence/phase3/`; fixture tests; `NOT_RUN` real model |
+| G6 | PASS | worktree ownership, bounded parallel, conflict/abort/retry, serial fallback, post-merge regression | `evidence/phase4/` |
+| G7 | PASS | OTel scrubbed spans/local fallback, benchmark raw data, context/recovery/reviewer/parallel ablations; A/B NOT_RUN, Harbor EXTERNAL_BLOCKED | `evidence/phase4/`, `evidence/benchmarks/` |
+| G8 | PASS | Python adapter real tools, FPGA fixture parsers/artifact/hardware status, agent-app demo | `evidence/phase5/`, `examples/` |
+| G9 | PASS (local) | full tests, ruff, docs, install, delivery manifest and blocker list consistent. Remote GitHub Actions is `NOT_RUN`. | `evidence/final/`, `evidence/delivery/` |
+
+Local core is verified; external integrations are blocked. Overall is **not** a claim of
+100% production completion.
+
+## Independent review
+
+A read-only independent review found and we fixed three high-severity false-PASS paths:
+older PASS masking a newer failure, clean-room failure falling back to old evidence, and
+committed protected-test tampering moving HEAD. Medium findings on worktree self-commits,
+rebase/regression rollback, stale status refresh, CLI exit codes, attempt-bound evidence,
+environment/PATH overrides and ignored files were also fixed. See `REVIEW.md` and the
+corresponding regression tests.
+
+## Actual local test snapshot
+
+- Full suite: `uv run pytest -q` — see `evidence/final/` for the immutable log,
+  JUnit XML, coverage JSON/XML and Git SHA.
+- Latest development run: 112 passed in 295.21s before the final evidence capture.
+- Warnings/deprecations: treated as errors only for `forgeflow.*` deprecations; recorded
+  in logs.
+- Real external checks performed: Pi RPC handshake (no model prompt), Claude CLI version/
+  auth probe (no paid completion), Docker daemon detection (unavailable), Harbor CLI
+  detection (missing), Icarus/Verilator detection (missing).
+
+## Environment
+
+- Windows 11, Python 3.13 for development; project supports >=3.11.
+- Git, uv, Node, Pi and Claude CLI present.
+- Docker executable present but daemon unavailable.
+- Harbor, Icarus Verilog, Verilator, FPGA hardware unavailable.
+
+## Known limitations and blockers
+
+| Item | State | Minimum human action |
+|---|---|---|
+| Real Pi/Claude model completion | BLOCKED / NOT_RUN | approve paid usage, then run `forge run --agent pi_rpc|claude_cli --allow-paid` |
+| GitHub CI remote execution | NOT_RUN | push branch and let `.github/workflows/ci.yml` run |
+| Harbor comparison | EXTERNAL_BLOCKED | install/configure Harbor and run a real suite |
+| Docker clean-room | EXTERNAL_BLOCKED | start Docker daemon and implement/validate container execution path |
+| FPGA simulation | BLOCKED | install Icarus and run RTL simulation |
+| FPGA hardware PASS | BLOCKED | real board run + independent signature trust root |
+| Manual/hardware gate | BLOCKED by design | configure an external signature verifier |
+| Real LLM benchmark quality | NOT_RUN | approve model budget; current agent is a labeled simulator |
+
+## Evidence and recovery next actions
+
+1. Inspect `evidence/manifest.json` for command, exit code, Git SHA, log SHA-256.
+2. Run `uv run pytest -q` and `uv run forge doctor --json`.
+3. For a local E2E: `uv run python examples/basic_goal/run_demo.py --clean-room`.
+4. For benchmark reproduction: `uv run forge benchmark --repeats 2`.
+5. To resume interrupted runtime state: `uv run forge recover` then `forge resume`.
+6. Do not mark external integrations PASS without replacing the corresponding BLOCKED/
+   NOT_RUN evidence with real observations.
